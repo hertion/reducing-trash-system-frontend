@@ -1,0 +1,11 @@
+/* miniprogram/pages/cleanerManage/transfer/transfer.wxss */
+.note{
+  color: dimgrey;
+  margin: 30rpx 0rpx 20rpx 36rpx;
+  font-size: 35rpx;
+}
+.bottom-button{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

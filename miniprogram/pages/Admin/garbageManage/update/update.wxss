@@ -1,0 +1,12 @@
+/* miniprogram/pages/Admin/garbageManage/recycleManage/update/update.wxss */
+.result-show{
+  margin-left: auto;
+  padding:10rpx 40rpx;
+  font-size: smaller;
+  color:darkgray
+}
+.bottom-button{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}

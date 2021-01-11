@@ -1,0 +1,5 @@
+<view class="admin-button-container">
+<van-button type="info" custom-style="width: 80%;margin: 20rpx 20rpx;height:120rpx;" bindtap="gotoRecycleManage">可回收垃圾</van-button>
+  <van-button type="danger" custom-style="width: 80%;margin: 20rpx 20rpx;height:120rpx;" bindtap="gotoUnRecycleManage">有害垃圾</van-button>
+  <van-button type="primary" custom-style="width: 80%;margin: 20rpx 20rpx;height:120rpx;" bindtap="gotoSoilManage">就地处理垃圾</van-button>
+</view>

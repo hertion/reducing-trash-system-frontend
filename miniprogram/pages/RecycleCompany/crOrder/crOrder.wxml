@@ -1,0 +1,78 @@
+<view class="container">
+	<view class="swiper-tab">
+		<view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">待审核</view>
+		<view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">已完成</view>
+	</view>
+	<!-- 筛选按钮 -->
+		<van-button type="info" size="small" plain icon="arrow-down" bind:click="showPopup2" class="choose-button">筛选</van-button>
+	<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+		<swiper-item class="swiper-items">
+			<scroll-view scroll-x="false" scroll-y="true" class='scroll-views'>
+				<block wx:for="{{unFinishedList}}" wx:key="index">
+					<view class="item" data-id="{{item.id}}" data-price="{{item.tradePrice}}" bindtap="gotoOrderDetail">
+						<view class="first-row">
+							<view class="first-row-left">
+								<van-icon name="send-gift-o" color="rgb(18,150,219)" size="25px" />{{item.msg}}</view>
+							<view class="first-row-right">待审核</view>
+						</view>
+						<view class="second-row">
+							<van-icon name="location-o" color="rgb(18,150,219)" size="25px" />{{item.address}}</view>
+					</view>
+				</block>
+			</scroll-view>
+		</swiper-item>
+		<swiper-item class="swiper-items">
+			<scroll-view scroll-x="false" scroll-y="true" class='scroll-views'>
+				<block wx:for="{{finishedList}}" wx:key="index">
+					<view class="item" data-id="{{item.id}}" data-price="{{item.tradePrice}}" bindtap="gotoOrderDetail">
+						<view class="first-row">
+							<view class="first-row-left">
+								<van-icon name="send-gift-o" color="rgb(18,150,219)" size="25px" />{{item.msg}}</view>
+							<view class="first-row-right">已完成</view>
+						</view>
+						<view class="second-row">
+							<van-icon name="location-o" color="rgb(18,150,219)" size="25px" />{{item.address}}</view>
+					</view>
+				</block>
+			</scroll-view>
+		</swiper-item>
+	</swiper>
+</view>
+
+<!-- 筛选弹出框 -->
+<van-popup
+  show="{{ show2 }}"
+  position="top"
+  bind:close="onClose"
+>
+<van-cell title="时间选择" is-link value="{{showDate}}" bind:click="showPopup1" />
+<van-cell title="地址选择" is-link value="黑龙江省 哈尔滨市 {{areaInfo}}" bindtap='select' />
+<van-button  color="#1296db" size="large" bindtap="submit">筛选</van-button>
+</van-popup>
+<!-- 时间选择器 -->
+<van-popup show="{{ show1 }}" position="bottom" bind:close="onClose1">
+	<van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" bind:cancel="onClose1" bind:confirm="onSubmitClose" max-date="{{ minDate }}" formatter="{{ formatter }}" />
+</van-popup>
+<!--地址选择器 -->
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+	<!-- 确认取消按钮 -->
+	<view class='btn'>
+		<text catchtap="cityCancel">取消</text>
+		<text style="float: right" catchtap="citySure">确定</text>
+	</view>
+	<!-- 选择地址 -->
+	<picker-view class='cont' bindchange="cityChange" value="{{value}}" wx:key="">
+		<!-- 省 -->
+		<picker-view-column>
+			<view wx:for="{{areas}}" class="picker-item" wx:key="{{index}}">{{item.name}}</view>
+		</picker-view-column>
+		<!-- 市 -->
+		<picker-view-column>
+			<view wx:for="{{streets}}" class="picker-item" wx:key="index">{{item.name}}</view>
+		</picker-view-column>
+		<!-- 区 -->
+		<picker-view-column>
+			<view wx:for="{{villages}}" class="picker-item" wx:key="index">{{item.name}}</view>
+		</picker-view-column>
+	</picker-view>
+</view>

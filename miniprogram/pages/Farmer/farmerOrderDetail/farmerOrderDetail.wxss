@@ -1,0 +1,40 @@
+/* miniprogram/pages/farmerOrderDetail/farmerOrderDetail.wxss */
+.container{
+  width: 100%;
+  padding: 30rpx;
+}
+.row{
+  margin:10rpx;
+  /* padding: 0rpx 30rpx; */
+  margin-right: auto;
+  display: flex;
+  width:100%;
+  /* border-bottom:3rpx solid rgb(163, 159, 159) ; */
+}
+.title{
+  width:30%;
+}
+.value{
+  width:70%;
+}
+.item{
+  margin-bottom:20rpx;
+  /* position: relative;
+  left: 30%; */
+}
+.score{
+  margin:20rpx 0rpx;
+  padding: 40rpx;
+  width: 100%;
+  height: 50rpx;
+  text-align: right;
+  /* background-color: rgb(18, 150, 219); */
+}
+.my-score{
+  position: relative;
+  right: 5%;
+}
+.score-value{
+  font-weight:bold;
+  color:red;
+}

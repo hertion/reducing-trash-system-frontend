@@ -1,0 +1,7 @@
+<!--miniprogram/pages/store/store.wxml-->
+<!-- <van-button type="primary" size="large" open-type='getUserInfo' bindtap="doLogin">登录</van-button> -->
+<view class="container">
+<van-icon name="underway" size="100px"  color="#1296db"/>
+<view class="text">功能实现中，尽请期待</view>
+</view>
+

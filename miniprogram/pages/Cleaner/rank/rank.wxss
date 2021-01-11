@@ -1,0 +1,58 @@
+/* miniprogram/pages/Rank/rank.wxss */
+.user{
+  display: flex;
+  padding:20rpx 30rpx;
+  border-bottom: 2rpx solid rgba(207, 207, 207, 0.97);
+}
+.user-index{
+  padding: 35rpx 40rpx;
+  font-weight:bold;
+}
+.user-name{
+  padding: 35rpx 10rpx 10rpx 30rpx;
+  font-weight:bold;
+}
+.user-score{
+  padding: 10rpx 20rpx;
+}
+.score-image{
+  height: 60rpx;
+  width: 60rpx;
+}
+.score-span{
+  position: relative;
+  font-weight:bold;
+  top:-15rpx;
+  right:-20rpx;
+}
+.item-image{
+  height: 130rpx;
+  width:130rpx;
+  border-radius: 50%;
+  margin-top: 2%;
+  position: absolute;
+  right: 10%;
+  
+/* -webkit-box-reflect: below -8rpx -webkit-linear-gradient(bottom, rgba(255,255,255,0.3) 0%, transparent 40%, transparent 100%); */
+
+  /* box-shadow: 2rpx 2rpx 2rpx rgba(0,0,0,.5);
+    -moz-box-shadow: 2rpx 2rpx 2rpx rgba(0,0,0,.5);
+    -webkit-box-shadow: 2rpx 2rpx 2rpx rgba(0,0,0,.5); */
+}
+.two-containers{
+  display: flex;
+}
+.small-button{
+  margin:5rpx;
+  width: 50%;
+  background-color: rgb(18,150,219);
+  color: white;
+  font-size: 30rpx;
+  height: 80rpx;
+}
+.three-buttons{
+  display: flex;
+}
+.mini-button{
+  font-size: 28rpx;
+}

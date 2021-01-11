@@ -1,0 +1,108 @@
+<!--miniprogram/pages/farmerRecycle/farmerRecycle.wxml-->
+<view class="container" style="height:1250rpx">
+  <view class="left">
+    <van-sidebar active-key="{{ active }}">
+      <van-sidebar-item title="金属类" id="0" bindtap='switchNav' />
+      <van-sidebar-item title="农药包装" id="1" bindtap='switchNav' />
+    </van-sidebar>
+  </view>
+  <view class="right">
+    <view class='type'>
+      <!-- current:当前所在滑块的 index -->
+      <!-- vertical:滑动方向是否为纵向 -->
+      <swiper current='{{currentTab}}' vertical='{{true}}' style="height:100%">
+        <!-- catchtouchmove 阻止弹窗后滚动穿透 -->
+        <swiper-item id="0" catchtouchmove="false">
+          <block wx:for="{{ unRecycleGarbage.metal}}" wx:key="index">
+            <view data-garbageId="{{item.id}}" class="garbage-item">
+              <view class="garbage-pic">
+                <image src="{{item.picture}}"></image>
+              </view>
+              <view class="garbage-note">
+                <view class="title">
+                  {{item.name}}
+                </view>
+                <view class="note">
+                  <view class="score">{{item.score}}积分</view>
+                  <view class="count">{{garbageChooses[item.id].amount}}{{item.unit}}</view>
+                </view>
+                <view class="footer" wx:if="{{item.unit=='斤'}}">
+                  <input data-id="{{item.id}}" data-name="amount" value="{{garbageChooses[item.id].amount}}" class="num-input" bindblur="onUnitChangeByFloat"></input>斤
+                  <button data-id="{{item.id}}" bindtap='addAmount' plain="true">
+                    <image class="icon" src="../../../images/util/add.png"></image>
+                  </button>
+                  <button data-id="{{item.id}}" bindtap='delAmount' plain="true">
+                    <image class="icon" src="../../../images/util/subtract.png"></image>
+                  </button>
+                </view>
+                <view class="footer" wx:if="{{item.unit=='个'}}">
+                  <input data-id="{{item.id}}" data-name="amount" value="{{garbageChooses[item.id].amount}}" class="num-input" bindblur="onUnitChangeByInt"></input>个
+                  <button data-id="{{item.id}}" bindtap='addAmount' plain="true">
+                    <image class="icon" src="../../../images/util/add.png"></image>
+                  </button>
+                  <button data-id="{{item.id}}" bindtap='delAmount' plain="true">
+                    <image class="icon" src="../../../images/util/subtract.png"></image>
+                  </button>
+                </view>
+                  <view class="footer" wx:if="{{item.unit=='节'}}">
+                  <input data-id="{{item.id}}" data-name="amount" value="{{garbageChooses[item.id].amount}}" class="num-input" bindblur="onUnitChangeByInt"></input>个
+                  <button data-id="{{item.id}}" bindtap='addAmount' plain="true">
+                    <image class="icon" src="../../../images/util/add.png"></image>
+                  </button>
+                  <button data-id="{{item.id}}" bindtap='delAmount' plain="true">
+                    <image class="icon" src="../../../images/util/subtract.png"></image>
+                  </button>
+                </view>
+              </view>
+            </view>
+          </block>
+        </swiper-item>
+        <swiper-item id="1" catchtouchmove="false">
+          <block wx:for="{{ unRecycleGarbage.pesticide}}" wx:key="index">
+            <view data-garbageId="{{item.id}}" class="garbage-item">
+              <view class="garbage-pic">
+                <image src="{{item.picture}}"></image>
+              </view>
+              <view class="garbage-note">
+                <view class="title">
+                  {{item.name}}
+                </view>
+                <view class="note">
+                  <view class="score">{{item.score}}积分</view>
+                  <view class="count">{{garbageChooses[item.id].amount}}{{item.unit}}</view>
+                </view>
+                <view class="footer" wx:if="{{item.unit=='斤'}}">
+                  <input data-id="{{item.id}}" data-name="amount" value="{{garbageChooses[item.id].amount}}" class="num-input" bindblur="onUnitChangeByFloat"></input>斤
+                  <button data-id="{{item.id}}" bindtap='addAmount' plain="true">
+                    <image class="icon" src="../../../images/util/add.png"></image>
+                  </button>
+                  <button data-id="{{item.id}}" bindtap='delAmount' plain="true">
+                    <image class="icon" src="../../../images/util/subtract.png"></image>
+                  </button>
+                </view>
+                <view class="footer" wx:if="{{item.unit=='个'}}">
+                  <input data-id="{{item.id}}" data-name="amount" value="{{garbageChooses[item.id].amount}}" class="num-input" bindblur="onUnitChangeByInt"></input>个
+                  <button data-id="{{item.id}}" bindtap='addAmount' plain="true">
+                    <image class="icon" src="../../../images/util/add.png"></image>
+                  </button>
+                  <button data-id="{{item.id}}" bindtap='delAmount' plain="true">
+                    <image class="icon" src="../../../images/util/subtract.png"></image>
+                  </button>
+                </view>
+              </view>
+            </view>
+          </block>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+</view>
+
+<view class="footer-container">
+  <view class="footer-left">
+    <view class="footer-score">积分：{{score}}</view>
+  </view>
+  <view class="footer-right">
+    <van-button round type="info" color="#3333CC" custom-style="width:200rpx;" bindtap="submit">确认</van-button>
+  </view>
+</view>

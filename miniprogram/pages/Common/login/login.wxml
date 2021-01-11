@@ -1,0 +1,30 @@
+<!--pages/login/login.wxml-->
+<!-- <text>登录</text> -->
+<view class="title">手机验证码登录</view>
+<van-cell-group>
+ <van-field
+    name="phone"
+    value="{{ phone }}"
+    label="手机号"
+    placeholder="请输入手机号"
+    border="{{ false }}"
+    bind:change="phoneOnChange"
+  />
+  <van-field
+    name="sm"
+    value="{{ sm }}"
+    center
+    clearable
+    label="短信验证码"
+    placeholder="请输入验证码"
+    border="{{ false }}"
+    use-button-slot
+    bind:change="smOnChange"
+  >
+    <van-button slot="button" size="small" type="primary" bindtap="bindSm"  disabled="{{smsFlag}}" style="color:{{sendColor}};"
+    >
+    {{sendTime}}
+    </van-button>
+  </van-field>
+</van-cell-group>
+<van-button type="primary" size="large" bindtap="bindLogin">登录</van-button>

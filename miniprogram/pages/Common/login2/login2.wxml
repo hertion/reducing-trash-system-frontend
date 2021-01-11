@@ -1,0 +1,26 @@
+<van-cell-group>
+  <view class="image-container">
+  </view>
+  <image class="show" src="../../../images/homePage/user.png"></image>
+  <van-field
+    value="{{ phone }}"
+    placeholder="请输入用户名"
+    border="{{ false }}"
+    bind:change="onChange"
+    label="用户名"
+    left-icon="user-circle-o"
+    bind:change="phoneOnChange"
+  />
+   <van-field
+    value="{{ password }}"
+    password
+    placeholder="请输入密码"
+    border="{{ false }}"
+    bind:change="onChange"
+    label="密码"
+    left-icon="edit"
+    bind:change="passwordOnChange"
+  />
+</van-cell-group>
+<van-button type="default" size="normal" custom-style="width:80%;left:10%;margin:60rpx 0rpx 20rpx 0rpx;"color="#1296DB" bindtap="bindLogin">登录</van-button>
+<!-- <van-button plain type="default" size="normal" custom-style="width:80%;left:10%;"color="#1296DB">注册</van-button> -->

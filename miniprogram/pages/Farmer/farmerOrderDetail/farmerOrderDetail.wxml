@@ -1,0 +1,59 @@
+<view class="container">
+	<!-- <view class="name">{{order.}}</view> -->
+	<!-- <view class="tele"></view> -->
+	<view class="row">
+		<view class="title">发起人姓名：</view>
+		<view class="value">{{order.name}}</view>
+	</view>
+	<view class="row">
+		<view class="title">联系电话：</view>
+		<view class="value">{{order.phoneNumber}}</view>
+	</view>
+	<view class="row">
+		<view class="title">地址：</view>
+		<view class="value">
+		<view >{{order.province+" "+order.city}}</view>
+		<view >{{order.area+" "+order.street+" "+order.village}}</view>
+			<view >{{order.address}}</view>
+		</view>
+	</view>
+	<view class="row">
+		<view class="title"> 订单编号：</view>
+		<view class="value">{{order.id}}</view>
+	</view>
+	<view class="row">
+		<view class="title"> 订单状态：</view>
+		<view class="value" wx:if="{{order.checkStatus}}">已完成</view>
+		<view class="value" wx:else>待处理</view>
+	</view>
+	<view class="row">
+		<view class="title"> 垃圾列表：</view>
+		<view class="value">
+			<block wx:for="{{order.garbageChooses}}" wx:key="index">
+				<view class="item">
+					{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}
+				</view>
+			</block>
+		</view>
+	</view>
+	<view class="row">
+		<view class="title">提交时间：</view>
+		<view class="value">{{order.insertTime}}</view>
+	</view>
+	<view class="row">
+		<view class="title">备注：</view>
+		<view class="value">{{order.remark}}</view>
+	</view>
+	<view class="score">
+		<view class="my-score" wx:if="{{order.checkStatus}}">
+			本单积分：<text class="score-value">{{order.score}}</text>
+		</view>
+		<view class="my-score" wx:else>
+			预计本单积分：<text class="score-value">{{order.score}}</text>
+		</view>
+	</view>
+	<van-button wx:if="{{!order.checkStatus}}" type="danger" custom-style="left:125%" bindtap="deleteOrder">取消订单</van-button>
+</view>
+
+
+<van-dialog id="van-dialog" />

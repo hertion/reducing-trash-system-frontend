@@ -1,0 +1,194 @@
+/* miniprogram/pages/farmerHomePage/farmerHomePage.wxss */
+.big-container{
+  background-color: 	#DCDCDC;
+  height: 100%;
+}
+/* 轮播图 */
+.lunbo{
+  /* margin:10rpx; */
+  width: 100%;
+}
+.lunbo image{
+  /* padding:10rpx; */
+  width: 100%;
+  max-height :100%;
+  border-radius: 20rpx;
+}
+/**保洁员按钮**/
+.cleaner-buttons-container{
+  padding: 30rpx 18rpx 20rpx 18rpx;
+}
+.cleaner-my-buttons{
+  display: flex;
+}
+.cleaner-my-button{
+  font-size: 30rpx;
+  border-radius: 20rpx;
+  background-color:white;
+  color: #1296db;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+  width:250rpx ;
+  /* width: 50%; */
+  margin: 5rpx;
+  padding: 10rpx;
+  text-align: center;
+}
+.cleaner-my-button view{
+  font-size: smaller;
+}
+.cleaner-my-button-2{
+  width: 50%;
+  font-size: 30rpx;
+  border-radius: 20rpx;
+  background-color:#1296db;
+  color: white;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+  margin: 10rpx 5rpx;
+}
+/**农户按钮**/
+
+.farmer-buttons-container{
+  display: flex;
+  padding: 30rpx 18rpx 20rpx 18rpx;
+}
+.button-image{
+  display: inline-block;
+  width: 70rpx;
+  height: 70rpx;
+}
+.farmer-my-button{
+  font-size: 30rpx;
+text-align: center;
+  border-radius: 20rpx;
+  background-color:white;
+  color: #1296db;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+  /* width:200rpx ;
+  margin: 0rpx 10rpx; */
+   width:170rpx ;
+  margin: 0rpx 8rpx;
+  padding: 10rpx;
+}
+/**欢迎标题**/
+.note{
+  padding: 25rpx 40rpx 0rpx 40rpx;
+}
+/**积分栏**/
+.show-container{
+  display: flex;
+  padding: 40rpx;
+  margin: 25rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+}
+.show-container-item{
+ width: 50%;
+}
+.show-score{
+  text-align: center;
+  font-size: 50rpx;
+  padding-top: 10rpx;
+}
+/**司机、可回收公司标题**/
+.title{
+  font-size: 40rpx;
+  font-weight: bold;
+  margin: 5%;
+  color:rgb(18, 150,219);
+}
+.write-order-button{
+  background-image: linear-gradient(to right, #C1E3FF,#ABC7FF);
+  border-radius: 60rpx;
+  height: 110rpx;
+  width: 90%;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+  color: white;
+  position: relative;
+}
+.write-order-button view{
+  position: relative;
+  top:8%
+}
+/**司机**/
+.text1{
+  padding-left: 40rpx;
+  text-align: left;
+  font-size:30rpx;
+}
+
+.item{
+  border-radius: 30rpx;
+  width: 95%;
+  min-height: 160rpx;
+  background-color: white;
+  text-align: center;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+  margin: 20rpx;
+  padding: 40rpx 0rpx;
+}
+.first-row{
+  display: flex;
+}
+.first-row-left{
+  width: 70%;
+  color: rgb(18,150,219);
+  font-weight:bold
+}
+.first-row-right{
+  width: 30%;
+}
+.second-row{
+  margin-top: 30rpx;
+  position:absolute;
+  left:13%;
+}
+/**ADMIN**/
+.admin-button-container{
+  display: flex;
+  padding: 30rpx 18rpx 20rpx 18rpx;
+}
+.admin-my-button{
+  font-size: 30rpx;
+  text-align: center;
+    border-radius: 20rpx;
+    background-color:white;
+    color: #1296db;
+    box-shadow:1px 1px 1px 1px #D3D3D3;
+    width:200rpx ;
+    margin: 0rpx 10rpx;
+     /* width:170rpx ;
+    margin: 0rpx 8rpx; */
+    padding: 10rpx;
+}
+/* 小贴士 */
+.new-container{
+  margin: 20rpx;
+  padding:10rpx;
+}
+.title1{
+  font-weight: bold;
+  color:rgb(18, 150,219);
+}
+.new-item{
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+  margin-bottom: 10rpx;
+  border-radius: 20rpx;
+}
+.new-image{
+  text-align: center;
+  padding-top: 20rpx;
+  border-radius: 20rpx;
+}
+.new-image image{
+  width: 650rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.new-title{
+  padding-bottom: 13rpx;
+  text-align: center;
+  font-size: smaller;
+  color:rgb(18, 150,219);
+}
+

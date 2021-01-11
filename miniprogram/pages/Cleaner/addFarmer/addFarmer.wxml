@@ -1,0 +1,30 @@
+<!--miniprogram/pages/addFarmer/addFarmer.wxml-->
+<van-field label="农户姓名" value="{{ name }}" placeholder="请输入农户姓名" border="{{ false }}" bind:change="onNameChange" />
+<van-field label="手机号码" type="number" value="{{ tele }}" placeholder="请输入农户手机号码" border="{{ false }}" bind:change="onTeleChange" />
+<van-field label="身份证号" value="{{ IDNumber }}" placeholder="请输入农户身份证号" border="{{ false }}" bind:change="onIDNumberChange" />
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+	<!-- 确认取消按钮 -->
+	<view class='btn'>
+		<text catchtap="cityCancel">取消</text>
+		<text style="float: right" catchtap="citySure">确定</text>
+	</view>
+	<!-- 选择地址 -->
+	<picker-view class='cont' bindchange="cityChange" value="{{value}}" wx:key="">
+		<!-- 省 -->
+		<picker-view-column>
+			<view wx:for="{{areas}}" class="picker-item" wx:key="{{index}}">{{item.name}}</view>
+		</picker-view-column>
+		<!-- 市 -->
+		<picker-view-column>
+			<view wx:for="{{streets}}" class="picker-item" wx:key="index">{{item.name}}</view>
+		</picker-view-column>
+		<!-- 区 -->
+		<picker-view-column>
+			<view wx:for="{{villages}}" class="picker-item" wx:key="index">{{item.name}}</view>
+		</picker-view-column>
+	</picker-view>
+</view>
+<van-cell title="地址选择" bindtap='select' is-link value="{{areaInfo}}" />
+<view style="visibility:{{addressMenuIsShow ? 'hidden':'visible'}}">
+	<van-button class="bottom-button" type="info" size="large" bindtap="submit">提交</van-button>
+</view>

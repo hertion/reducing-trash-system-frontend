@@ -1,0 +1,12 @@
+<!--miniprogram/pages/Common/new2/new2.wxml-->
+<view class="container">
+  <image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new1.jpg"></image>
+  <view class="title">垃圾分类小误区</view>
+  
+  <view class="red">误区一、大棒骨是厨余垃圾</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>事实上，大棒骨因为“难腐蚀”被列入“其它垃圾”。类似的还有玉米核、坚果壳、果核等。鸡骨等则是厨余垃圾。</view>
+  <view class="red">误区二、厕纸是纸，也可回收</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>厕纸、卫生纸遇水即溶，不算可回收的“纸张”，类似的还有陶器、烟盒等。</view>
+  <view class="red">误区三、厨余垃圾装袋扔进桶</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>常用的塑料袋，即使是可以降解的也远比厨余垃圾更难腐蚀。此外塑料袋本身是可回收垃圾。正确做法应该是将厨余垃圾倒入垃圾桶，塑料袋另扔进“可回收垃圾”桶。</view>
+</view>

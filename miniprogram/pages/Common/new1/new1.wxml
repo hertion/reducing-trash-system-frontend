@@ -1,0 +1,16 @@
+<!--miniprogram/pages/Common/new1/new1.wxml-->
+<view class="container">
+  <image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new3.jpg"></image>
+  <view class="title">小节练就　“低碳达人”</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>为了帮助您迅速成为一名称职的"低碳达人",业内专家给出家居生活建议，希望您能够在日常生活中多多实践，以实际行动减少碳排放，为保护生存环境贡献一份力量。居家生活免不了消耗各种能源，如果能够注意小节，除可以降低能耗、减少碳排放之外，还可以替您节省不少银子。</view>
+  <view class="red">节能照明</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>注意随手关灯，使用高效节能灯泡。美国的能源部门估计，单单使用高效节能灯泡代替传统电灯泡，就能避免四亿吨二氧化碳被释放。节能灯最好不要短时间内开关，节能灯在开关时是最耗电的。</view>
+  <view class="red">低碳烹饪</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>尽量节约厨房里的能源。食用油在加热时产生致癌物，并造成油烟污染居室环境。减少煎炒烹炸的菜肴，多煮食蔬菜。不要把饭锅和水壶装得太满，否则煮沸后溢出汤水，既浪费能源，又容易扑灭灶火，引发燃气泄漏。调整火苗的燃烧范围，使其不超过锅底外缘，取得最佳加热效果。如果锅小火大的话，火苗烧在锅底四周只会白白消耗燃气。</view>
+  <view class="red">电器节能</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>购买洗衣机、电视机、空调及其他电器时，选择可靠的低耗节能产品。电视、电脑不用时及时切断电源，既节约用电又防止插座短路引发火灾的隐患。保持冰箱处于无霜状态。</view>
+  <view class="red">循环利用</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>靠循环再利用的方法来进行材料的循环使用，可以减少生产新原料的数量，从而降低二氧化碳排放量。例如，纸和卡纸板等有机材料的循环再利用，可以避免从垃圾填埋地释放出来的沼气(一种能引起温室效应的气体，大部分是甲烷)。据统计，回收一吨废纸能生产800千克的再生纸，可以少砍17棵大树，节约一半以上的造纸原料，减少水污染。因此，节约用纸就是保护森林、保护环境。</view>
+  <view class="red">垃圾分类</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>垃圾分类可以回收宝贵的资源，同时减少填埋和焚烧垃圾所消耗的能源。例如，废纸被直接送到造纸厂，用以生产再生纸；饮料瓶、罐子和塑料等也可以送到相关的工厂，成为再生资源；家用电器可以送到专门的厂家，进行分解回收。家里可以准备不同的垃圾袋，分别收集废纸、塑料、包装盒、厨余垃圾等。每天进行垃圾分类和回收，不仅是我们应尽的责任，也有利于培养孩子爱护环境的习惯和自觉性。</view>
+</view>

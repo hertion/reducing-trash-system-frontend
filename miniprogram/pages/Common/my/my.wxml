@@ -1,0 +1,76 @@
+<!--miniprogram/pages/my/my.wxml-->
+<view class="on-container">
+	<view class="userAvatar">
+		<open-data type="userAvatarUrl"></open-data>
+	</view>
+	<!--获取用户头像直接显示在小程序中-->
+	<view class="userNickName">用户名： {{user.name }}
+		<!-- <open-data type="userNickName" lang="zh_CN"></open-data> -->
+		<view wx:if="{{user.role=='FARMER'}}" style="margin-top:10rpx;">身份：农户</view>
+		<view wx:if="{{user.role=='CLEANER'}}" style="margin-top:10rpx;">身份：保洁员</view>
+		<view wx:if="{{user.role=='DRIVER'}}" style="margin-top:10rpx;">身份：司机</view>
+		<view wx:if="{{user.role=='RECYCLEFIRM'}}" style="margin-top:10rpx;">身份：垃圾回收公司</view>
+		<view wx:if="{{user.role=='TRANSFERSTATION'}}" style="margin-top:10rpx;">身份：中转站</view>
+		<view style="margin-top:10rpx;">ID号：{{user.id}}</view>
+	
+	</view>
+</view>
+<view class="show-container" wx:if="{{user.role=='CLEANER'||user.role=='FARMER'}}">
+	<view class="show-container-item">
+		<view class="show-text"> 我的积分</view>
+		<view class="show-score">{{score}}分</view>
+	</view>
+	<view class="show-container-item">
+		<view class="show-text">累计参与</view>
+		<view class="show-score">{{times}}次</view>
+	</view>
+</view>
+<view class="button-container">
+	<view wx:if="{{user.role=='CLEANER'}}">
+		<button class="button-border" bindtap="gotoFCManage">
+			<image src="../../../images/my/order.png"></image>农户管理
+			<van-icon class="arrow-icon" name="arrow" />
+		</button>
+		<button class="button-border" bindtap="gotoFCOrder">
+			<image src="../../../images/my/order.png"></image>农户订单
+			<van-icon class="arrow-icon" name="arrow" />
+		</button>
+		<button class="button-border" bindtap="gotoCROrder">
+			<image src="../../../images/my/order.png"></image>可回收垃圾订单
+			<van-icon class="arrow-icon" name="arrow" />
+		</button>
+		<button class="button-border" bindtap="gotoCDOrder">
+			<image src="../../../images/my/order.png"></image>厨余垃圾订单
+			<van-icon class="arrow-icon" name="arrow" />
+		</button>
+		<!-- <button class="button-border" bindtap="gotoCD2Order">
+			<image src="../../../images/my/order.png"></image>危废垃圾订单
+			<van-icon class="arrow-icon" name="arrow" />
+		</button> -->
+
+	</view>
+	<view wx:if="{{user.role=='FARMER'}}">
+		<button bindtap="gotoFarmerOrder" class="button-border"><image src="../../../images/my/order.png"></image>我的订单<van-icon  class="arrow-icon" name="arrow" /></button>
+		<!-- <button bindtap="gotoMyNote" class="button-border"><image src="../../../images/my/order.png"></image>账号信息<van-icon  class="arrow-icon" name="arrow" /></button> -->
+	</view>
+	<view wx:if="{{user.role=='DRIVER'}}">
+		<button bindtap="gotodriverOrder" class="button-border"><image src="../../../images/my/order.png"></image>我的订单<van-icon  class="arrow-icon" name="arrow" /></button>
+	</view>
+	<view wx:if="{{user.role=='RECYCLEFIRM'}}">
+<button class="button-border" bindtap="gotoCROrderByRecycle"><image src="../../../images/my/order.png"></image>我的订单<van-icon  class="arrow-icon" name="arrow" /></button>
+	</view>
+	<view wx:if="{{user.role=='TRANSFERSTATION'}}">
+<button class="button-border" bindtap="gotoRecord"><image src="../../../images/my/order.png"></image>我的订单<van-icon  class="arrow-icon" name="arrow" /></button>
+	</view>
+	<!-- <view wx:if="{{user.role=='CLEANER'||user.role=='FARMER'}}">
+<button class="button-border">
+		<image src="../../../images/my/order.png"></image>我的兑换
+		<van-icon class="arrow-icon" name="arrow" />
+	</button>
+	</view> -->
+	
+	<button bindtap="gotoUserSetting">
+		<image src="../../../images/my/order.png"></image>账号设置
+		<van-icon class="arrow-icon" name="arrow" />
+	</button>
+</view>

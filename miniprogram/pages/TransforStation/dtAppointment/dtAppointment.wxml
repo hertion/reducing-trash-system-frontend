@@ -1,0 +1,12 @@
+<!--pages/homePage/homePage.wxml-->
+<view style="margin:20rpx;">
+	<h1>欢迎您！请填写您的订单：</h1>
+</view>
+<van-cell-group>
+	<van-field value="{{ driverId }}" required clearable label="司机编号"  placeholder="请输入编号" bind:click-icon="onClickIcon" bind:blur="onIdChange" />
+  <van-field value="{{ name }}"  clearable label="司机姓名" readonly  bind:click-icon="onClickIcon" bind:change="onIdChange" />
+	<van-field value="{{ tele }}"  required clearable label="司机联系方式"  bind:click-icon="onClickIcon" bind:change="onTeleChange" />
+	<van-field value="{{ weight }}" type="number" label="重量(kg)" placeholder="请输入重量" required border="{{ false }}" bind:change="onWeightChange" />
+</van-cell-group>
+
+<van-button class="bottom-button" type="info" size="large" bindtap="bindsubmit">提交</van-button>

@@ -1,0 +1,80 @@
+<view class="container">
+	<!-- <view class="name">{{order.}}</view> -->
+	<!-- <view class="tele"></view> -->
+	<view class="row">
+		<view class="title">发起人姓名：</view>
+		<view class="value">{{order.baseOrder.name}}</view>
+	</view>
+	<view class="row">
+		<view class="title">联系电话：</view>
+		<view class="value">{{order.baseOrder.phoneNumber}}</view>
+	</view>
+	<view class="row">
+		<view class="title">地址：</view>
+		<view class="value">
+		<view >{{order.baseOrder.province+" "+order.baseOrder.city}}</view>
+		<view >{{order.baseOrder.area+" "+order.baseOrder.street+" "+order.baseOrder.village}}</view>
+			<view >{{order.baseOrder.address}}</view>
+		</view>
+	</view>
+	<view class="row">
+		<view class="title"> 订单编号：</view>
+		<view class="value">{{order.id}}</view>
+	</view>
+	<view class="row">
+		<view class="title"> 订单状态：</view>
+		<view class="value" wx:if="{{order.baseOrder.checkStatus}}">已完成</view>
+		<view class="value" wx:else>待处理</view>
+	</view>
+	<view class="row">
+		<view class="title"> 可回收垃圾：</view>
+		<view class="value">
+			<view class="garbage">
+				<view class="garbage-left">
+					<block wx:for="{{order.baseOrder.garbageChooses}}" wx:key="index">
+						<view class="item" wx:if="{{(item.garbage.category)=='可回收垃圾'&&((item.amount)!=0)}}">
+							{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}
+						</view>
+					</block>
+				</view>
+				<!-- <view class="garbage-right" bindtap="gotoRecycle" wx:if="{{!order.baseOrder.checkStatus}}">
+					<image src="../../../images/util/edit2.png"></image>
+				</view> -->
+			</view>
+		</view>
+	</view>
+	<view class="row">
+		<view class="title"> 运货司机：</view>
+		<view class="value">{{order.recycleDriver.name}}</view>
+	</view>
+	<view class="row">
+		<view class="title"> 交付公司：</view>
+		<view class="value">{{order.company}}</view>
+	</view>
+	<view class="row">
+		<view class="title">提交时间：</view>
+		<view class="value">{{order.baseOrder.insertTime}}</view>
+	</view>
+	<view class="row">
+		<view class="title">备注：</view>
+		<view class="value">{{order.baseOrder.remark}}</view>
+	</view>
+	<view class="score">
+		<view class="my-score" wx:if="{{order.baseOrder.checkStatus}}">
+			本单积分：<text class="score-value">{{order.baseOrder.score}}</text>
+		</view>
+		<view class="my-score" wx:else>
+			预计本单积分：<text class="score-value">{{order.baseOrder.score}}</text>
+		</view>
+		<view class="my-score" wx:if="{{order.baseOrder.checkStatus}}">
+			交易价格：<text class="score-value">{{order.tradePrice}}</text>
+		</view>
+		<view class="my-score" wx:else>
+			预计价格：<text class="score-value">{{order.tradePrice}}</text>
+		</view>
+	</view>
+</view>
+<view class="bottom-button" wx:if="{{!order.baseOrder.checkStatus}}">
+	<!-- <van-button type="danger" size="large">取消订单</van-button> -->
+	<van-button color="rgb(18,150,219)" size="large" bindtap="confirmOrder">确认订单</van-button>
+</view>

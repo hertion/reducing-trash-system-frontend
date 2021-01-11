@@ -1,0 +1,153 @@
+{
+  "miniprogramRoot": "miniprogram/",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "setting": {
+    "urlCheck": false,
+    "es6": true,
+    "enhance": true,
+    "postcss": true,
+    "preloadBackgroundData": false,
+    "minified": true,
+    "newFeature": true,
+    "coverView": true,
+    "nodeModules": true,
+    "autoAudits": false,
+    "showShadowRootInWxmlPanel": true,
+    "scopeDataCheck": false,
+    "uglifyFileName": false,
+    "checkInvalidKey": true,
+    "checkSiteMap": true,
+    "uploadWithSourceMap": true,
+    "compileHotReLoad": false,
+    "useMultiFrameRuntime": false,
+    "useApiHook": true,
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "enableEngineNative": false,
+    "bundle": false,
+    "useIsolateContext": true,
+    "useCompilerModule": true,
+    "userConfirmedUseCompilerModuleSwitch": false,
+    "userConfirmedBundleSwitch": false,
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./miniprogram/package.json",
+        "miniprogramNpmDistDir": "./miniprogram/"
+      }
+    ],
+    "minifyWXSS": true
+  },
+  "appid": "wx87a4c0a884febb45",
+  "projectname": "miniprogram-manager",
+  "libVersion": "2.8.1",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "id": -1,
+          "name": "db guide",
+          "pathName": "pages/databaseGuide/databaseGuide",
+          "query": ""
+        },
+        {
+          "name": "pages/homePage/homePage",
+          "pathName": "pages/homePage/homePage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/userManage/userManage",
+          "pathName": "pages/userManage/userManage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cleanerManage/cleanerManage",
+          "pathName": "pages/cleanerManage/cleanerManage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/detailCleaner/detailCleaner",
+          "pathName": "pages/detailCleaner/detailCleaner",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cleanerManage/editCleaner/editCleaner",
+          "pathName": "pages/cleanerManage/ editCleaner/editCleaner",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cleanerManage/editCleaner/editCleaner",
+          "pathName": "pages/cleanerManage/editCleaner/editCleaner",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cleanerManage/transferCleaner/transferCleaner",
+          "pathName": "pages/cleanerManage/transferCleaner/transferCleaner",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/cleanerManage/detailCleaner/detailCleaner",
+          "pathName": "pages/cleanerManage/detailCleaner/detailCleaner",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Admin/garbageManage/garbageManage",
+          "pathName": "pages/Admin/garbageManage/garbageManage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Admin/garbageManage/recycleManage/recycleManage",
+          "pathName": "pages/Admin/garbageManage/recycleManage/recycleManage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Common/homePage/homePage",
+          "pathName": "pages/Common/homePage/homePage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Admin/garbageManage/recycleManage/recycleManage",
+          "pathName": "pages/Admin/garbageManage/recycleManage/recycleManage",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Admin/garbageManage/recycleManage/add/add",
+          "pathName": "pages/Admin/garbageManage/recycleManage/add/add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Driver/driverAppointment/driverAppointment",
+          "pathName": "pages/Driver/driverAppointment/driverAppointment",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

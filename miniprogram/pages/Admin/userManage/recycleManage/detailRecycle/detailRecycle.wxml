@@ -1,0 +1,13 @@
+<!--pages/cleanerManage/editCleaner/editCleaner.wxml-->
+<view class="note-container">
+  <view class="note">基本信息</view>
+  <!-- <button class="my-button">暂停使用</button> -->
+</view>
+
+<van-cell-group>
+  <van-cell title="姓名" value="{{name}}" />
+  <van-cell title="手机号码" value="{{phoneNumber}}" />
+  <van-cell title="所属位置" value="{{areaInfo}}" />
+</van-cell-group>
+<van-button class="bottom-button" type="danger" size="large" bindtap="stopLogin">禁用账号</van-button>
+

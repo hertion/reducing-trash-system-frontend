@@ -1,0 +1,91 @@
+/* miniprogram/pages/homePage/homePage.wxss */
+.container{
+  width: 100%;
+  padding:0% 5%;
+  text-align: left;
+}
+.title{
+  font-size: 40rpx;
+  font-weight: bold;
+  margin: 10% 10% 0% 10%;
+}
+.note{
+  margin: 5% 10% 2% 10%;
+}
+.my-card{
+  border-radius: 30rpx;
+  width: 82%;
+  min-height:150rpx ;
+  background-color: white;
+  text-align: center;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+  margin: 9%;
+}
+.first-row{
+  display: flex;
+}
+.text{
+  padding: 15rpx 40rpx;
+  text-align: left;
+  font-size: 28rpx;
+}
+.mini-button{
+  font-size: 28rpx;
+  position: absolute;
+  left: 65%;
+  color: dimgray;
+}
+.big-button{
+  position: fixed; 
+  bottom: 0; 
+  width:100%;
+}
+
+
+/* 地址选择器样式 */
+.picker-view {
+  width: 100%;
+  display: flex;
+  z-index:999;
+  background-color: #fff;
+  background: rgba(158, 145, 145, 0.2);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0rpx;
+  height: 40vh;
+}
+.btn {
+  z-index: 999;
+  width: 100%;
+  height: 90rpx;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  line-height: 90rpx;
+  text-align: center;
+  display: flex;
+  background: rgba(255,255,255,.8);
+  justify-content: space-between;
+}
+.cont {
+  width: 100%;
+  z-index: 999;
+  height: 389rpx;
+}
+.picker-item {
+  z-index: 999;
+  line-height: 70rpx;
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  text-align: center;
+}
+.address {
+  z-index: 999;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  border-bottom: 1rpx solid #f1f1f1;
+}

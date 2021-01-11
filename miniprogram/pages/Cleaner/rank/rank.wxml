@@ -1,0 +1,36 @@
+<view class="rank-container">
+	<view class="two-containers">
+		<button class="small-button" bindtap="rankByVillages">保洁员积分
+		</button>
+		<button class="small-button" bindtap="rankByMyFarmers">农户积分
+		</button>
+	</view>
+  <view class="three-buttons" wx:if="{{flag==0}}">
+<button class="mini-button" bindtap="rankByVillages" style="border-bottom:{{color1}};">按村排行</button>
+<button class="mini-button" bindtap="rankByStreets" style="border-bottom:{{color2}};">按街道排行</button>
+<button class="mini-button" bindtap="rankByAreas" style="border-bottom:{{color3}};">按区排行</button>
+  </view>
+	<block wx:for="{{rankList}}" wx:key="index">
+		<view class="user">
+			<view class="user-index">{{index+1}}</view>
+			<view class="user-text">
+				<view class="user-name">{{item.name}}</view>
+				<view class="user-score">
+					<image class="score-image" src="../../../images/rank/score.png"></image><span class="score-span">{{item.score}}</span>
+				</view>
+			</view>
+			<view class="item-pic" wx:if="{{index==0}}">
+				<image class="item-image" src="../../../images/rank/medal1.png"></image>
+			</view>
+			<view class="item-pic" wx:if="{{index==1}}">
+				<image class="item-image" src="../../../images/rank/medal2.png"></image>
+			</view>
+			<view class="item-pic" wx:if="{{index==2}}">
+				<image class="item-image" src="../../../images/rank/medal3.png"></image>
+			</view>
+			<view class="item-pic" wx:if="{{index>2}}">
+				<image class="item-image" src="../../../images/rank/medal4.png"></image>
+			</view>
+		</view>
+	</block>
+</view>

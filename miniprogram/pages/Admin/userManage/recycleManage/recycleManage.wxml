@@ -1,0 +1,21 @@
+<!--miniprogram/pages/Admin/driverManage/driverManage.wxml-->
+<van-search
+  value="{{ cid }}"
+  label="垃圾回收公司ID"
+  placeholder="请输入垃圾回收公司的ID"
+  shape="round"
+  background="#1296db"
+  use-action-slot
+  bind:change="onSearchChange"
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onSearch" style="color:white;">搜索</view>
+</van-search>
+<block wx:for="{{cleaners}}"  wx:key="index">
+  <view wx:if="{{item.usable}}" class="item" data-id="{{item.id}}" data-index="{{index}}" bindtap="gotoDetailCleaner">
+			  <van-cell title="{{item.name}}" is-link />
+	</view>
+</block>
+<!-- <van-button class="big-button" size="large" color="#1296db" bindtap="gotoAddCleaner">添加垃圾回收公司</van-button> -->
+
+

@@ -1,0 +1,63 @@
+<view class="garbage">
+  <view class="title">金属类</view>
+  <block wx:for="{{ recycleGarbage.metal}}" wx:key="index">
+    <view data-garbageId="{{item.id}}" class="garbage-item" wx:if="{{item.showAble}}">
+      <view class="garbage-image" >
+        <image src="{{item.picture}}" wx:if="{{item.picture}}" ></image>
+        <image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/noImage.jpg" wx:if="{{!(item.picture)}}" ></image>
+      </view>
+      <view class="garbage-note">
+        <view class="garbage-note-item bold">{{item.name}}</view>
+        <!-- <view class="garbage-note-item">建议单价：{{item.suggestPrice}}元/{{item.unit}}</view>
+        <view class="garbage-note-item">实际单价：{{item.recyclePrice}}元/{{item.unit}}</view> -->
+        <view class="garbage-note-item">积分：{{item.score}}积分/{{item.unit}}</view>
+      </view>
+      <view class="garbage-button">
+        <image src="../../../../images/util/edit2.png" data-garbageId="{{item.id}}" bindtap="gotoUpdate"></image>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="garbage">
+  <view class="title">农药类</view>
+  <block wx:for="{{ recycleGarbage.pesticide}}" wx:key="index">
+    <view data-garbageId="{{item.id}}" class="garbage-item" wx:if="{{item.showAble}}">
+      <view class="garbage-image" >
+        <image src="{{item.picture}}" wx:if="{{item.picture}}" ></image>
+        <image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/noImage.jpg" wx:if="{{!(item.picture)}}" ></image>
+      </view>
+      <view class="garbage-note">
+        <view class="garbage-note-item bold">{{item.name}}</view>
+        <!-- <view class="garbage-note-item">建议单价：{{item.suggestPrice}}元/{{item.unit}}</view>
+        <view class="garbage-note-item">实际单价：{{item.recyclePrice}}元/{{item.unit}}</view> -->
+        <view class="garbage-note-item">积分：{{item.score}}积分/{{item.unit}}</view>
+      </view>
+      <view class="garbage-button">
+        <image src="../../../../images/util/edit2.png" data-garbageId="{{item.id}}" bindtap="gotoUpdate"></image>
+      </view>
+    </view>
+  </block>
+</view>
+<view class="garbage">
+  <view class="title">厨余垃圾</view>
+  <block wx:for="{{ recycleGarbage.kitchen}}" wx:key="index">
+    <view data-garbageId="{{item.id}}" class="garbage-item" wx:if="{{item.showAble}}">
+      <view class="garbage-image" >
+        <image src="{{item.picture}}" wx:if="{{item.picture}}" ></image>
+        <image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/noImage.jpg" wx:if="{{!(item.picture)}}" ></image>
+      </view>
+      <view class="garbage-note">
+        <view class="garbage-note-item bold">{{item.name}}</view>
+        <!-- <view class="garbage-note-item">建议单价：{{item.suggestPrice}}元/{{item.unit}}</view>
+        <view class="garbage-note-item">实际单价：{{item.recyclePrice}}元/{{item.unit}}</view> -->
+        <!-- <view class="garbage-note-item">积分：{{item.score}}积分/{{item.unit}}</view> -->
+      </view>
+      <view class="garbage-button">
+        <!-- <image src="../../../../images/util/edit2.png" data-garbageId="{{item.id}}" bindtap="gotoUpdate"></image> -->
+      </view>
+    </view>
+  </block>
+</view>
+<view style="height:100rpx">
+</view>
+<van-button class="bottom-button" type="info" size="large" bindtap="add">添加</van-button>

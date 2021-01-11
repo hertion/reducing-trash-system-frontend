@@ -1,0 +1,4 @@
+<!--miniprogram/pages/myNote/myNote.wxml-->
+  <van-cell title="修改密码" is-link bindtap="gotoUpdatePassword" />
+  <van-cell title="我的保洁员" label="联系电话:{{phoneNumber}}" is-link value="{{myCleaner}}" />
+  

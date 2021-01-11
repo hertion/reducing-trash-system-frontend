@@ -1,0 +1,70 @@
+/* miniprogram/pages/my/my.wxss */
+.on-container{
+  width: 100%;
+  display: flex;
+  margin-top: 10%;
+}
+
+.userAvatar{
+  width: 40%;
+  margin: 40rpx 30rpx 30rpx 50rpx;
+  border-radius: 50%;
+  justify-content: center;
+  overflow: hidden;
+  width: 200rpx;
+  height: 200rpx;
+
+}/*头像样式*/
+
+.userNickName{
+  width: 50%;
+  padding-top: 70rpx;
+  padding-left: 10%;
+  /* text-align: center; */
+  font-size: 30rpx;
+  /* margin: 20rpx ;  广告位之前 */
+  /* justify-content: center; */
+  color: black;
+}/*昵称*/
+
+.show-container{
+  display: flex;
+  padding: 40rpx;
+  margin: 25rpx 40rpx;
+  background-color: white;
+  border-radius: 20rpx;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+}
+.show-container-item{
+ width: 50%;
+}
+.show-score{
+  text-align: center;
+  font-size: 50rpx;
+  padding-top: 10rpx;
+}
+
+.button-container{
+  background-color: white;
+  margin: 50rpx 40rpx;
+  border-radius: 20rpx;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+}
+.button-container button{
+  border-radius:0rpx;
+}
+.button-border{
+  border-bottom:3rpx solid rgb(163, 159, 159) ;
+}
+.button-container image{
+  width: 50rpx;
+  height:50rpx;
+  position:absolute;
+  top:25%;
+  left: 10%;
+}
+.arrow-icon{
+  position: absolute;
+right: 10%;
+top: 30%;
+}

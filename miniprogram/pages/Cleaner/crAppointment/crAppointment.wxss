@@ -1,0 +1,39 @@
+/* miniprogram/pages/Cleaner/cfAppointment/cfAppointment.wxss */
+.my-card{
+  border-radius: 30rpx;
+  width: 95%;
+  min-height:130rpx ;
+  background-color: white;
+  text-align: center;
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+  margin: 20rpx;
+}
+.first-row{
+  display: flex;
+}
+.text{
+  padding: 15rpx 40rpx;
+  text-align: left;
+  font-size: 28rpx;
+}
+.mini-button{
+  font-size: 28rpx;
+  position: absolute;
+  left: 65%;
+  color: dimgray;
+}
+.show{
+  margin-left: auto;
+  margin-bottom: 100rpx;
+}
+.show-item{
+  font-size: 30rpx;
+  color:rgb(18,150,219);
+  font-weight:bold;
+  margin: 20rpx 50rpx;
+}
+.big-button{
+  position: fixed; 
+  bottom: 0; 
+  width:100%;
+}

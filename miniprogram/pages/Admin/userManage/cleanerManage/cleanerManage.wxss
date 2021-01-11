@@ -1,0 +1,6 @@
+/* miniprogram/pages/cleanerManage/cleanerManage.wxss */
+.big-button{
+  position: fixed; 
+  bottom: 0; 
+  width:100%;
+}

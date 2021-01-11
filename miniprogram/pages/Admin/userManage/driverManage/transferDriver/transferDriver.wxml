@@ -1,0 +1,10 @@
+<!--miniprogram/pages/cleanerManage/transfer/transfer.wxml-->
+<view class="note">请输入您要转让司机的ID：</view>
+<van-field value="{{ newCleanerId }}" placeholder="" bind:change="onIdChange" bind:blur="check" border="{{ false }}" />
+<van-cell-group>
+  <view class="note">司机信息确认：</view>
+  <van-cell title="姓名" value="{{newCleaner.name}}" />
+  <van-cell title="手机号码" value="{{newCleaner.phoneNumber}}" />
+  <!-- <van-cell title="所属位置" value="{{newCleaner.}}" /> -->
+</van-cell-group>
+<van-button class="bottom-button" type="info" size="large" bindtap="submit">确定</van-button>

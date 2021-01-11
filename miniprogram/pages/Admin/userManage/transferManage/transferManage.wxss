@@ -1,0 +1,6 @@
+/* miniprogram/pages/Admin/driverManage/driverManage.wxss */
+.big-button{
+  position: fixed; 
+  bottom: 0; 
+  width:100%;
+}

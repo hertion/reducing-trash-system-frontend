@@ -1,0 +1,90 @@
+/* miniprogram/pages/Common/guide/guide.wxss */
+/* 导航栏样式 */
+.swiper-tab {
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+}
+
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 50%;
+  color: #797979;
+}
+
+.on {
+  color: rgb(18,150,219);
+  border-bottom: 5rpx solid rgb(18,150,219);
+}
+
+.swiper-box {
+  display: block;
+  width: 100%;
+  height: 1200rpx;
+  overflow: hidden;
+}
+.swiper-items{
+  height: 100%;
+}
+.scroll-views{
+  height: 100%;
+}
+.big-title{
+  color: rgb(18,150,219);
+  font-weight: bold;
+  font-size: larger;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.guide-img{
+  width: 100%;
+  height: 1700rpx;
+}
+/* 垃圾条目 */
+
+.garbage{
+  margin:10rpx;
+}
+.title{
+  font-weight: bold;
+  margin: 10rpx 30rpx;
+  color: rgb(18,150,219);
+}
+.garbage-item{
+  display: flex;
+    margin: 20rpx;
+    padding: 15rpx;
+    border-radius: 30rpx;
+    background-color: white;
+    box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, .3);
+}
+.bold{
+  font-weight: bold;
+}
+.garbage-image{
+  width: 35%;
+  text-align: center;
+}
+.garbage-image image{
+  width: 180rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+  }
+.garbage-note{
+  width: 50%;
+  margin-left: 30rpx;
+}
+.garbage-button{
+width: 10%;
+}
+.garbage-button image{
+  width:53rpx;
+  height:53rpx;
+  position: relative;
+  top: 60%;
+}
+.garbage-note-item{
+  margin: 8rpx 0rpx;
+}

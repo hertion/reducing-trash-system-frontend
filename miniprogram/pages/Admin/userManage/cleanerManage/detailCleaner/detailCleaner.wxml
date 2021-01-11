@@ -1,0 +1,51 @@
+<!--pages/cleanerManage/editCleaner/editCleaner.wxml-->
+<view class="note-container">
+  <view class="note">基本信息</view>
+  <!-- <button class="my-button">暂停使用</button> -->
+</view>
+
+<van-cell-group>
+  <van-cell title="姓名" value="{{name}}" />
+  <van-cell title="手机号码" value="{{phoneNumber}}" />
+  <van-cell title="所属位置" value="{{areaInfo}}" />
+</van-cell-group>
+
+<view class="note-container">
+  <view class="note">负责农户</view>
+  <button class="my-button2" bindtap="chooseFlag">选择</button>
+</view>
+<van-checkbox-group value="{{ result }}" bind:change="onChange" style="margin-bottom:30%">
+  <van-cell-group>
+    <van-cell
+      wx:for="{{ list }}"
+      wx:key="index"
+      title="{{ item.name }}"
+      value-class="value-class"
+      clickable
+      data-index="{{ index }}"
+      bind:click="toggle"
+    >
+      <van-checkbox
+        wx:if="{{chooseFlag}}"
+        catch:tap="noop"
+        class="checkboxes-{{ index }}"
+        name="{{ item.id }}"
+      />
+    </van-cell>
+  </van-cell-group>
+</van-checkbox-group>
+
+<van-popup
+  show="{{ show }}"
+  position="bottom"
+  overlay="{{false}}"
+  custom-style="height: 15%; background-color: darkgrey;"
+  bind:close="onClose"
+  round
+>
+<view class="popup-container">
+  <van-checkbox value="{{ checked }}" bind:change="onCheckAllChange" custom-class="check-all">全选</van-checkbox>
+  <van-button round type="info" custom-class="transfer" bindtap="gotoTransferCleaner">转让</van-button>
+</view>
+</van-popup>
+<van-button class="bottom-button" type="danger" size="large" bindtap="stopLogin">禁用账号</van-button>

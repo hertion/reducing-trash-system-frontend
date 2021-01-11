@@ -1,0 +1,54 @@
+<!--miniprogram/pages/farmerAppointment/farmerAppointment.wxml-->
+<view class="my-card" bindtap="gotoFarmerAddressManage">
+	<view class="first-row">
+		<view class="text"><text>{{name}}\t{{tele}}</text></view>
+		<button class="mini-button" bindtap="gotoFarmerAddressManage">发起人信息 ></button>
+	</view>
+	<view class="text">
+		{{areaInfo}}
+	</view>
+	<view class="text">
+	{{address}}
+	</view>
+</view>
+<view class="my-card" bindtap="gotoFarmerRecycle">
+	<view class="first-row">
+		<view>
+			<block wx:for="{{garbageChooses}}" wx:key="index">
+				<view class="text" wx:if="{{item.type=='recycle'&&item.amount!=0&&item!=null}}">{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}</view>
+			</block>
+
+		</view>
+		<button class="mini-button" bindtap="gotoFarmerRecycle">可回收垃圾 >
+		</button>
+	</view>
+</view>
+<view class="my-card" bindtap="gotoFarmerUnRecycle">
+	<view class="first-row">
+		<view>
+			<block wx:for="{{garbageChooses}}" wx:key="index">
+				<view class="text" wx:if="{{item.type=='unRecycle'&&item.amount!=0&&item!=null}}">{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}</view>
+			</block>
+		</view>
+		<button class="mini-button" bindtap="gotoFarmerUnRecycle">不可回收垃圾 ></button>
+	</view>
+
+</view>
+<view class="my-card"bindtap="gotoFarmerSoil">
+	<view class="first-row">
+		<view>
+			<block wx:for="{{garbageChooses}}" wx:key="index">
+				<view class="text" wx:if="{{item.type=='soil'&&item.amount!=0&&item!=null}}">{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}</view>
+			</block>
+		</view>
+		<button class="mini-button" bindtap="gotoFarmerSoil">就地处理垃圾 ></button>
+	</view>
+
+</view>
+<!-- <textarea  auto-height  label="备注" style="margin:20rpx; box-shadow:1px 1px 1px 1px #D3D3D3; border-radius: 30rpx;background:white;width:95%;min-height:130rpx;"/> -->
+<van-field model:value="{{ remark }}" label="备注" type="textarea" autosize border="{{ false }}"  bind:change="onRemarkChange" style="margin:30rpx 20rpx 30rpx 20rpx; box-shadow:1px 1px 1px 1px #D3D3D3; border-radius: 10rpx;" />
+<view class="show">
+	<view class="show-item">预计积分：{{score}}</view>
+	<view class="show-item">建议价格：￥{{price}}</view>
+</view>
+<van-button class="big-button" size="large" color="#1296db" bindtap="submit">提交预约</van-button>

@@ -1,0 +1,4 @@
+<!--miniprogram/pages/userSetting/userSetting.wxml-->
+<van-cell title="修改密码" is-link bindtap="gotoUpdatePassword" />
+<van-cell wx:if="{{user.role=='FARMER'}}" title="我的保洁员" label="联系电话:{{phoneNumber}}" is-link value="{{myCleaner}}" />
+<van-button class="bottom-button" type="danger" size="large" bindtap="logOut">退出账号</van-button>

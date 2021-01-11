@@ -1,0 +1,23 @@
+<!--miniprogram/pages/Admin/garbageManage/recycleManage/add/add.wxml-->
+<van-divider />
+<van-cell title="垃圾类别" is-link value="{{category1+' '+category2}}" bind:click="showPopup1" />
+<van-field label="名称" value="{{ value }}" placeholder="请输入名称" border="{{ false }}" bind:change="onNameChange"/>
+<van-divider />
+<van-cell title="单位" is-link value="{{unit}}" bind:click="showPopup2" />
+<van-field label="积分" value="{{score}}" disabled="{{unit==''}}" placeholder="请输入对应积分" border="{{ false }}" bind:change="onScoreChange" bind:blur="onScoreCheck" />
+<view class="result-show" hidden="{{score==''}}">{{ score}}积分/{{unit}}</view>
+<van-field label="建议单价" value="{{ suggestPrice }}" disabled="{{!(unit!=''&&category1=='可回收垃圾')}}"  placeholder="请输入对应计划单价" border="{{ false }}"
+  bind:change="onSuggestPriceChange" bind:blur="onSuggestPriceCheck" />
+<view class="result-show" hidden="{{suggestPrice==''}}">{{ suggestPrice}}元/{{unit}}</view>
+<van-field label="实际单价" value="{{ recyclePrice}}" disabled="{{!(unit!=''&&category1=='可回收垃圾')}}"  placeholder="请输入对应实际单价" border="{{ false }}"
+  bind:change="onRecyclePriceChange"  bind:blur="onRecyclePriceCheck"   />
+  <view class="result-show" hidden="{{recyclePrice==''}}">{{recyclePrice}}元/{{unit}}</view>
+<van-popup show="{{ show1 }}" position="bottom">
+  <van-picker show-toolbar title="垃圾类别" columns="{{ myCategorys }}" bind:change="onCategoryChange"
+    bind:cancel="onCategoryCancel" bind:confirm="onCategoryConfirm" />
+</van-popup>
+<van-popup show="{{ show2 }}" position="bottom">
+  <van-picker show-toolbar title="计量单位" columns="{{ myUnits }}" bind:cancel="onUnitCancel"
+    bind:confirm="onUnitConfirm" bind:cancel="onUnitCancel" />
+</van-popup>
+<van-button class="bottom-button" type="info" size="large" bindtap="submit">提交</van-button>

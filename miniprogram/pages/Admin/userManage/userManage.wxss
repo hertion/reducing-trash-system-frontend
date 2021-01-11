@@ -1,0 +1,7 @@
+/* miniprogram/pages/userManage/userManage.wxss */
+.note{
+  padding: 40rpx 40rpx 60rpx 40rpx;
+}
+.button-container{
+  text-align: center;
+}

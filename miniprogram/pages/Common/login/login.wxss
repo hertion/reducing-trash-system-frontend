@@ -1,0 +1,5 @@
+/* pages/login/login.wxss */
+.title{
+  text-align: center;
+  padding: 20rpx;
+}

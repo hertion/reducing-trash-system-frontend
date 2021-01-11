@@ -1,0 +1,5 @@
+/* miniprogram/pages/Admin/garbageManage/garbageManage.wxss */
+.admin-button-container{
+  margin-top: 30%;
+  text-align: center;
+}

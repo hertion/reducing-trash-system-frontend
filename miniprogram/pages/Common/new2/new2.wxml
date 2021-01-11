@@ -1,0 +1,28 @@
+<!--miniprogram/pages/Common/new2/new2.wxml-->
+<view class="container">
+  <image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new2.jpeg"></image>
+  <view class="title">“零成本”参与生活垃圾减量</view>
+  <view class="black"><text
+      decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>绿色生活方式可从身边的点滴小事做起。按照生活垃圾“能减尽减、能分尽分、能用尽用”的原则，市民采取以下5种方式，便能以举手之劳换取环境的大改变。
+  </view>
+
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>一、树立绿色、低碳生活理念，养成物尽其用、减少废弃的文明行为。
+  </view>
+
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>二、拒绝购买过度包装产品，选购简易、大容量包装产品。
+  </view>
+
+  <view class="black"><text
+      decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>三、少用或不用一次性餐盒、一次性筷子、一次性塑料袋、一次性纸杯等一次性用品，减少废弃物。</view>
+
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>四、选购和使用再生材料制品，选购净菜进家庭。</view>
+
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>五、适量点餐、节约粮食、减少浪费，减少餐厨垃圾。</view>
+
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>大家在家中应在源头将生活垃圾分为可回收物、厨余垃圾和其它垃圾三类，并分别放置于不同的垃圾桶中。其中，厨房应放置厨余垃圾桶，投放垃圾时应将其放入小区设置的厨余垃圾桶；家庭产生其它垃圾应采用单独的垃圾桶存放。</view>
+
+      <!-- <view class="red">节能照明</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+  <view class="red">节能照明</view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view> -->
+  </view>

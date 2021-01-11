@@ -1,0 +1,57 @@
+<!--miniprogram/pages/Common/welcome/welcome.wxml-->
+<view style="margin:8px 8px 8px 8px;">
+    <swiper class='lunbo' indicator-dots='true' autoplay='true' interval='4000' style="height:330rpx;">
+        <swiper-item>
+            <image src='cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/homePage1 .jpg'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/homePage2.png'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/homePage3.png'></image>
+        </swiper-item>
+    </swiper>
+</view>
+<van-notice-bar color="#1989fa" background="#ecf9ff" left-icon="volume-o" text="欢迎使用村镇回收宝小程序，祝您体验愉快！" />
+<view class="farmer-buttons-container" >
+    <view class="farmer-my-button" bindtap="gotoGuide">
+        <image class="button-image" src="../../../images/homePage/guide.png"></image>
+        <view>投递指南</view>
+    </view>
+    <view class="farmer-my-button" bindtap="gotoStore">
+        <image class="button-image" src="../../../images/homePage/store.png"></image>
+        <view>兑换商城</view>
+    </view>
+    <view class="farmer-my-button" bindtap="gotoFarmerAppoint">
+        <image class="button-image" src="../../../images/homePage/appoint.png"></image>
+        <view>预约上门</view>
+    </view>
+</view>
+<view class="note" >
+    欢迎您！
+</view>
+<view class="show-container">
+    <view class="show-container-item">
+        <image class="logo" src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/logo.png"></image>
+        <view class="show-text">村镇回收宝</view>
+        
+    </view>
+    <view class="show-container-item">
+        <button class="login" bindtap="gotoLogin"><view class="login-text">登录/注册</view></button>
+    </view>
+</view>
+<view class="new-container">
+  <view class="title">小贴士</view>
+  <view class="new-item" bindtap="gotoNew3">
+    <view class="new-image"><image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new1.jpg"></image></view>
+    <view class="new-title">垃圾分类小误区</view>
+  </view>
+  <view class="new-item" bindtap="gotoNew1">
+    <view class="new-image"><image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new3.jpg"></image></view>
+    <view class="new-title">小节练就　“低碳达人”</view>
+  </view>
+  <view class="new-item" bindtap="gotoNew2">
+    <view class="new-image"><image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new2.jpeg"></image></view>
+    <view class="new-title">“零成本”参与生活垃圾减量</view>
+  </view>
+</view>

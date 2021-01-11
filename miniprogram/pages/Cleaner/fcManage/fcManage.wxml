@@ -1,0 +1,19 @@
+<!--miniprogram/pages/fcManage/fcManage.wxml-->
+<view>
+	<block wx:for="{{farmersList}}" wx:key="index">
+		<view class="item" data-id="{{item.id}}" bindtap="gotoFarmerDetail">
+      <view class="index">{{index+1}}</view>
+      <view class="name">{{item.name}}</view>
+      <view class="phone">{{item.phoneNumber}}</view>
+<view class="icon"><van-icon name="arrow" /></view>
+			<!-- <view class="first-row">
+				<view class="first-row-left">
+					<van-icon name="send-gift-o" color="rgb(18,150,219)" size="25px" />{{item.msg}}</view>
+				<view class="first-row-right">已完成</view>
+			</view>
+			<view class="second-row">
+				<van-icon name="location-o" color="rgb(18,150,219)" size="25px" />{{item.address}}</view> -->
+		</view>
+	</block>
+</view>
+<van-button class="bottom-button" type="info" size="large" bindtap="addFarmer">+ 添加农户</van-button>

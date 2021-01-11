@@ -1,0 +1,130 @@
+<!--miniprogram/pages/farmerHomePage/farmerHomePage.wxml-->
+<!-- <view style="margin:8px 8px 8px 8px;" wx:if="{{user.role=='FARMER'||user.role=='CLEANER'}}"> -->
+<view style="margin:8px 8px 8px 8px;">
+    <swiper class='lunbo' indicator-dots='true' autoplay='true' interval='4000' style="height:330rpx;">
+        <swiper-item>
+            <image src='cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/homePage1 .jpg'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/homePage2.png'></image>
+        </swiper-item>
+        <swiper-item>
+            <image src='cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/homePage3.png'></image>
+        </swiper-item>
+    </swiper>
+</view>
+<van-notice-bar color="#1989fa" background="#ecf9ff" left-icon="volume-o" text="欢迎使用村镇回收宝小程序，祝您体验愉快！" />
+<view class="admin-button-container" wx:if="{{user.role=='ADMIN'}}">
+    <view class="admin-my-button" bindtap="gotoUserManage">
+        <image class="button-image" src="../../../images/homePage/person.png"></image>
+        <view>用户管理</view>
+    </view>
+    <view class="admin-my-button" bindtap="gotoGarbageManage">
+        <image class="button-image" src="../../../images/homePage/taste.png"></image>
+        <view>垃圾管理</view>
+    </view>
+    <view class="admin-my-button" bindtap="">
+        <image class="button-image" src="../../../images/homePage/report.png"></image>
+        <view>报表管理</view>
+    </view>
+</view>
+<view class="cleaner-buttons-container" wx:if="{{user.role=='CLEANER'}}">
+    <view class="cleaner-my-buttons">
+        <view class="cleaner-my-button">
+            <image class="button-image" src="../../../images/homePage/guide.png"></image>
+            <view>投递指南</view>
+        </view>
+        <view class="cleaner-my-button" bindtap="gotoStore">
+            <image class="button-image" src="../../../images/homePage/store.png"></image>
+            <view>兑换商城</view>
+        </view>
+        <view class="cleaner-my-button" bindtap="gotoCleanerRank">
+            <image class="button-image" src="../../../images/homePage/rank1.png"></image>
+            <view>排行榜</view>
+        </view>
+    </view>
+    <view class="cleaner-my-buttons">
+        <view class="cleaner-my-button" bindtap="gotoFCOrder">
+            <image class="button-image" src="../../../images/homePage/fcOrder.png"></image>
+            <view> 审核农户订单</view>
+        </view>
+        <view class="cleaner-my-button" bindtap="gotoCRAppointment">
+            <image class="button-image" src="../../../images/homePage/recycle.png"></image>
+            <view> 交付可回收垃圾</view>
+        </view>
+        <view class="cleaner-my-button" bindtap="gotoCDAppointment">
+            <image class="button-image" src="../../../images/homePage/unRecycle.png"></image>
+            <view> 交付危废垃圾</view>
+        </view>
+    </view>
+</view>
+<view class="farmer-buttons-container" wx:if="{{user.role=='FARMER'}}">
+    <view class="farmer-my-button" bindtap="gotoGuide">
+        <image class="button-image" src="../../../images/homePage/guide.png"></image>
+        <view>投递指南</view>
+    </view>
+    <view class="farmer-my-button" bindtap="gotoStore">
+        <image class="button-image" src="../../../images/homePage/store.png"></image>
+        <view>兑换商城</view>
+    </view>
+    <view class="farmer-my-button" bindtap="gotoFarmerAppoint">
+        <image class="button-image" src="../../../images/homePage/appoint.png"></image>
+        <view>预约上门</view>
+    </view>
+    <view class="farmer-my-button" bindtap="gotoFarmerRank">
+        <image class="button-image" src="../../../images/homePage/rank1.png"></image>
+        <view>排行榜</view>
+    </view>
+</view>
+<view class="note" wx:if="{{user.role=='FARMER'||user.role=='CLEANER'}}">
+    欢迎您！{{user.name}}
+</view>
+<view class="show-container" wx:if="{{user.role=='FARMER'||user.role=='CLEANER'}}">
+    <view class="show-container-item">
+        <view class="show-text">我的积分</view>
+        <view class="show-score">{{score}}分</view>
+    </view>
+    <view class="show-container-item">
+        <view class="show-text">累计参与</view>
+        <view class="show-score">{{times}}次</view>
+    </view>
+</view>
+
+<view class="title"
+    wx:if="{{user.role=='DRIVER'||user.role=='RECYCLEFIRM'||user.role=='TRANSFERSTATION'}}">
+    欢迎你，{{user.name}}!</view>
+<view wx:if="{{user.role=='DRIVER'}}">
+    <!-- <view class="text1" wx:if="{{unFinishedList.length!=0}}">为您找到以下待处理订单：</view>
+    <view class="text1" wx:if="{{unFinishedList.length==0}}">您目前没有待处理订单。</view>
+    <block wx:for="{{unFinishedList}}" wx:key="index">
+        <view class="item" data-id="{{item.id}}" bindtap="gotoOrderDetail">
+            <view class="first-row">
+                <view class="first-row-left">
+                    <van-icon name="send-gift-o" color="rgb(18,150,219)" size="25px" />{{item.msg}}</view>
+                <view class="first-row-right">待审核</view>
+            </view>
+            <view class="second-row">
+                <van-icon name="location-o" color="rgb(18,150,219)" size="25px" />{{item.address}}</view>
+        </view>
+    </block> -->
+    <button  class="write-order-button" bindtap="gotoDriverAppointment"> <view> 填写订单</view></button>
+</view>
+<button class="write-order-button" wx:if="{{user.role=='RECYCLEFIRM'}}" bindtap="submit" bindtap="gotoAppointment">
+   <view>订单处理</view></button>
+<!-- <van-button wx:if="{{user.role=='TRANSFERSTATION'}}" type="info" size="large" bindtap="submit"
+    bindtap="gotoDTAppointment">填写订单</van-button> -->
+<view class="new-container">
+  <view class="title1">小贴士</view>
+  <view class="new-item" bindtap="gotoNew3">
+    <view class="new-image"><image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new1.jpg"></image></view>
+    <view class="new-title">垃圾分类小误区</view>
+  </view>
+  <view class="new-item" bindtap="gotoNew1">
+    <view class="new-image"><image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new3.jpg"></image></view>
+    <view class="new-title">小节练就　“低碳达人”</view>
+  </view>
+  <view class="new-item" bindtap="gotoNew2">
+    <view class="new-image"><image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new2.jpeg"></image></view>
+    <view class="new-title">“零成本”参与生活垃圾减量</view>
+  </view>
+</view>

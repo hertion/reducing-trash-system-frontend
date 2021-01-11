@@ -1,0 +1,9 @@
+<!--miniprogram/pages/userManage/userManage.wxml-->
+<view class="note">请选择您要管理的用户身份：</view>
+<view class="button-container">
+  <!-- <van-button type="info" custom-style="width: 80%;margin: 20rpx 20rpx;height:120rpx;">农户</van-button> -->
+  <van-button type="info" custom-style="width: 80%;margin: 20rpx 20rpx;height:120rpx;" bindtap="gotoCleanerManage">保洁员</van-button>
+  <van-button type="info" custom-style="width: 80%;margin: 20rpx 20rpx;height:120rpx;" bindtap="gotoDriverManage">司机</van-button>
+  <van-button type="info" custom-style="width: 80%;margin: 20rpx 20rpx;height:120rpx;" bindtap="gotoRecyleManage">可回收公司</van-button>
+  <!-- <van-button type="info" custom-style="width: 80%;margin: 20rpx 20rpx;height:120rpx;" bindtap="gotoTransferManage">中转站</van-button> -->
+</view>

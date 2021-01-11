@@ -1,0 +1,26 @@
+<!--miniprogram/pages/farmerAppointment/farmerAppointment.wxml-->
+<view class="my-card" bindtap="gotoCDAddressManage">
+	<view class="first-row">
+		<view class="text"><text>{{name}}\t{{tele}}</text></view>
+		<button class="mini-button" bindtap="gotoCDAddressManage">发起人信息 ></button>
+	</view>
+	<view class="text">
+		{{areaInfo}}
+	</view>
+	<view class="text">
+		{{address}}
+	</view>
+</view>
+<view class="my-card" bindtap="gotoUnRecycle">
+	<view class="first-row">
+		<view>
+			<block wx:for="{{garbageChooses}}" wx:key="index">
+				<view class="text" wx:if="{{item.amount!=0&&item!=null}}">{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}</view>
+			</block>
+		</view>
+		<button class="mini-button" bindtap="gotoUnRecycle">不可回收垃圾 ></button>
+	</view>
+
+</view>
+<van-field model:value="{{ remark }}" label="备注" type="textarea" autosize border="{{ false }}" bind:change="onRemarkChange" style="margin:30rpx 20rpx; box-shadow:1px 1px 1px 1px #D3D3D3; border-radius: 10rpx;" />
+<van-button class="big-button" size="large" color="#1296db" bindtap="submit">提交预约</van-button>

@@ -1,0 +1,117 @@
+/* miniprogram/pages/farmerUnRecycle/farmerUnRecycle.wxss *//* miniprogram/pages/farmerRecycle/farmerRecycle.wxss */
+.container{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  color: #323233;
+}
+.left{
+  width: 20%;
+  height: 100%;
+}
+.right{
+width: 80%;
+height: 100%;
+background-color:#FAFAFA;
+}
+.garbage-item{
+  display: flex;
+}
+.garbage-pic{
+  width: 35%;
+}
+.garbage-pic image{
+  width: 190rpx;
+  height:200rpx;
+  margin:20rpx 10rpx;
+}
+.garbage-note{
+  width: 65%;
+  font-size: 30rpx;
+}
+.title{
+  font-weight:bold;
+  margin: 10rpx 10rpx 70rpx 10rpx;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.note{
+  display: flex;
+  margin: 10rpx;
+}
+.score{
+  width: 70%;
+  color: red;
+  font-weight:bold;
+}
+.count{
+  width: 30%;
+  font-size: 25rpx;
+  position:relative;
+  bottom: -10rpx;
+  /* right: 5%; */
+}
+.num-input{
+  width:60rpx;
+  background-color:white;
+  margin:10rpx;
+   border:solid black 1rpx;
+   position: relative;
+   top:-10rpx;
+}
+.type{
+  height: 100%;
+}
+swiper{
+  height: 500rpx;
+}
+swiper-item{
+  font-size:50rpx;
+}
+.footer{
+  display: flex;
+  font-size: 25rpx;
+  flex-direction: row;
+  /* padding-left:40% ; */
+  padding: 10rpx;
+  background-color: rgb(250, 250, 250);
+}
+/*加减号图标的css*/
+.footer button{
+  margin: 0rpx;
+  padding: 0rpx;
+  width: 80rpx;
+}
+.footer button[plain] {
+  display: inline-block;
+  border: 0;
+  margin: 0rpx;
+}
+.icon {
+  margin: 0;
+  width: 50rpx;
+  height: 50rpx;
+  border: none;
+}
+.footer-container{
+  width: 100%;
+  display: flex;
+  padding: 25rpx;
+  position: fixed;
+  bottom: 0;
+  background-color:rgb(18,150,219);
+}
+.footer-left{
+  width: 65%;
+}
+.footer-score{
+  text-align: center;
+  position: relative;
+  top: 24rpx;
+  font-size: 35rpx;
+  color:white;
+  font-weight:bold;
+  width: 100%;
+}
+.footer-right{
+  width: 35%;
+}

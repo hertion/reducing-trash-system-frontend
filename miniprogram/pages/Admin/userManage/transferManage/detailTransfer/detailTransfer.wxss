@@ -1,0 +1,42 @@
+/* pages/cleanerManage/editCleaner/editCleaner.wxss */
+.note-container {
+  display: flex;
+}
+
+.note {
+  color: dimgrey;
+  margin: 30rpx 0rpx 20rpx 36rpx;
+  font-size: 35rpx;
+}
+
+.my-button {
+  font-size: 30rpx;
+  background-color: orangered;
+  color: aliceblue;
+  width: 200rpx;
+  height: 70rpx;
+  margin: 20rpx;
+  left:45%;
+}
+.my-button2 {
+  font-size: 30rpx;
+  background-color: dodgerblue;
+  color: aliceblue;
+  width: 150rpx;
+  height: 70rpx;
+  margin: 20rpx;
+  left:50%;
+}
+.value-class {
+  flex: none !important;
+}
+.popup-container{
+  display: flex;
+}
+.check-all{
+  margin:50rpx 
+}
+.transfer{
+  margin:30rpx;
+  width: 400rpx;
+}

@@ -1,0 +1,31 @@
+<!--miniprogram/pages/orderFilter/orderFilter.wxml-->
+<van-cell title="时间选择" is-link value="{{showDate}}" bind:click="showPopup1" />
+<van-cell title="地址选择" is-link value="黑龙江省 哈尔滨市 {{areaInfo}}" bindtap='select' />
+<view style="visibility:{{addressMenuIsShow ? 'hidden':'visible'}}">
+	<van-button class="big-button" color="#1296db" size="large" bindtap="submit">筛选</van-button>
+</view>
+<van-popup show="{{ show1 }}" position="bottom" bind:close="onClose1">
+	<van-datetime-picker type="date" value="{{ currentDate }}" bind:input="onInput" bind:cancel="onClose1" bind:confirm="onSubmitClose" max-date="{{ minDate }}" formatter="{{ formatter }}" />
+</van-popup>
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+	<!-- 确认取消按钮 -->
+	<view class='btn'>
+		<text catchtap="cityCancel">取消</text>
+		<text style="float: right" catchtap="citySure">确定</text>
+	</view>
+	<!-- 选择地址 -->
+	<picker-view class='cont' bindchange="cityChange" value="{{value}}" wx:key="">
+		<!-- 省 -->
+		<picker-view-column>
+			<view wx:for="{{areas}}" class="picker-item" wx:key="{{index}}">{{item.name}}</view>
+		</picker-view-column>
+		<!-- 市 -->
+		<picker-view-column>
+			<view wx:for="{{streets}}" class="picker-item" wx:key="index">{{item.name}}</view>
+		</picker-view-column>
+		<!-- 区 -->
+		<picker-view-column>
+			<view wx:for="{{villages}}" class="picker-item" wx:key="index">{{item.name}}</view>
+		</picker-view-column>
+	</picker-view>
+</view>

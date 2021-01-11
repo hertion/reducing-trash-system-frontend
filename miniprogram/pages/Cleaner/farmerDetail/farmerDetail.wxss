@@ -1,0 +1,24 @@
+/* miniprogram/pages/farmerDetail/farmerDetail.wxss */
+.container{
+  width: 100%;
+  padding: 30rpx;
+}
+.row{
+  margin:10rpx;
+  /* padding: 0rpx 30rpx; */
+  margin-right: auto;
+  display: flex;
+  width:100%;
+  /* border-bottom:3rpx solid rgb(163, 159, 159) ; */
+}
+.title{
+  width:30%;
+}
+.value{
+  width:70%;
+}
+.item{
+  margin-bottom:20rpx;
+  /* position: relative;
+  left: 30%; */
+}

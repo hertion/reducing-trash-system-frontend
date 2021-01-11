@@ -1,0 +1,49 @@
+/* miniprogram/pages/Admin/garbageManage/recycleManage/recycleManage.wxss */
+
+.garbage{
+  margin:10rpx;
+}
+.title{
+  font-weight: bold;
+  margin: 10rpx 30rpx;
+  color: rgb(18,150,219);
+}
+.garbage-item{
+  display: flex;
+    margin: 20rpx;
+    padding: 15rpx;
+    border-radius: 30rpx;
+    background-color: white;
+    box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, .3);
+}
+.bold{
+  font-weight: bold;
+  margin: 20rpx 0rpx;
+}
+.garbage-image{
+  width: 35%;
+  text-align: center;
+}
+.garbage-image image{
+  width: 180rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+  }
+.garbage-note{
+  width: 50%;
+  margin-left: 30rpx;
+}
+.garbage-button{
+width: 10%;
+}
+.garbage-button image{
+  width:53rpx;
+  height:53rpx;
+  position: relative;
+  top: 60%;
+}
+.bottom-button{
+  position: fixed; 
+  bottom: 0; 
+  width:100%;
+}

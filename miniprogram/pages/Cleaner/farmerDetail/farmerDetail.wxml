@@ -1,0 +1,18 @@
+<view class="container">
+  <view class="row">
+		<view class="title">ID：</view>
+		<view class="value">{{farmer.id}}</view>
+	</view>
+  <view class="row">
+		<view class="title">姓名：</view>
+		<view class="value">{{farmer.name}}</view>
+	</view>
+  <view class="row">
+		<view class="title">联系电话：</view>
+		<view class="value">{{farmer.phoneNumber}}</view>
+	</view>
+  <view class="row">
+		<view class="title">所在辖区：</view>
+		<view class="value">{{farmer.province+" "+farmer.city+" "+farmer.area+" "+farmer.street+" "+farmer.village}}</view>
+	</view>
+</view>

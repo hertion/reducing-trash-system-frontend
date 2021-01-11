@@ -1,0 +1,22 @@
+/* miniprogram/pages/fcManage/fcManage.wxss */
+.bottom-button{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.item{
+  display: flex;
+  margin:30rpx;
+}
+.index{
+  width: 10%;
+}
+.name{
+  width: 30%;
+}
+.phone{
+  width:60%;
+}
+.icon{
+  width: 10%;
+}

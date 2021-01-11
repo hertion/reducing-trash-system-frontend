@@ -1,0 +1,34 @@
+<!--miniprogram/pages/farmerAddManage/farmerAddManage.wxml-->
+<van-cell-group>
+	<van-field model:value="{{ name }}" label="联系人姓名" border="{{ false }}" 	bind:change="onNameChange" required clearable />
+	<van-field model:value="{{ tele }}" label="联系电话" border="{{ false }}" bind:blur="onTeleChange" required clearable />
+	<van-cell title="地址选择" is-link value="{{areaInfo}}" bindtap='select' />
+	<van-field model:value="{{ address }}" label="详细住址" border="{{ false }}" bind:change="onAddressChange" required clearable />
+</van-cell-group>
+<view style="visibility:{{addressMenuIsShow ? 'hidden':'visible'}}">
+<van-button bindtap="gotoAppointment" class="big-button" size="large" color="#1296db">确认</van-button>
+</view>
+
+
+<view class="picker-view" animation="{{animationAddressMenu}}" style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+	<!-- 确认取消按钮 -->
+	<view class='btn'>
+		<text catchtap="cityCancel">取消</text>
+		<text style="float: right" catchtap="citySure">确定</text>
+	</view>
+	<!-- 选择地址 -->
+	<picker-view class='cont' bindchange="cityChange" value="{{value}}" wx:key="">
+		<!-- 省 -->
+		<picker-view-column>
+			<view wx:for="{{areas}}" class="picker-item" wx:key="{{index}}">{{item.name}}</view>
+		</picker-view-column>
+		<!-- 市 -->
+		<picker-view-column>
+			<view wx:for="{{streets}}" class="picker-item" wx:key="index">{{item.name}}</view>
+		</picker-view-column>
+		<!-- 区 -->
+		<picker-view-column>
+			<view wx:for="{{villages}}" class="picker-item" wx:key="index">{{item.name}}</view>
+		</picker-view-column>
+	</picker-view>
+</view>

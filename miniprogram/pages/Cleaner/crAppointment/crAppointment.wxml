@@ -1,0 +1,42 @@
+<!--miniprogram/pages/Cleaner/cfAppointment/cfAppointment.wxml-->
+<view class="my-card" bindtap="gotoAddressManage">
+	<view class="first-row">
+		<view class="text"><text>{{name}}\t{{tele}}</text></view>
+		<button class="mini-button" bindtap="gotoAddressManage">发起人信息 ></button>
+	</view>
+	<view class="text">
+		{{areaInfo}}
+	</view>
+	<view class="text">
+	{{address}}
+	</view>
+</view>
+<view class="my-card" bindtap="gotoRecycle">
+	<view class="first-row">
+		<view>
+			<block wx:for="{{garbageChooses}}" wx:key="index">
+				<view class="text" wx:if="{{item.type=='recycle'&&item.amount!=0&&item!=null}}">{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}</view>
+			</block>
+
+		</view>
+		<button class="mini-button" bindtap="gotoRecycle">可回收垃圾 >
+		</button>
+	</view>
+</view>
+<van-cell title="取货司机" is-link bind:click="showPopup1" value="{{driverName}}" style="margin:10rpx 20rpx; box-shadow:1px 1px 1px 1px #D3D3D3; border-radius: 10rpx;" />
+<van-cell title="垃圾可回收公司" is-link value="{{firmName}}" bind:click="showPopup2" style="margin:10rpx 20rpx; box-shadow:1px 1px 1px 1px #D3D3D3; border-radius: 10rpx;"/>
+<van-field model:value="{{ remark }}" label="备注" type="textarea" autosize border="{{ false }}"  bind:change="onRemarkChange" style="margin:10rpx 20rpx; box-shadow:1px 1px 1px 1px #D3D3D3; border-radius: 10rpx;" />
+<view class="show">
+	<view class="show-item">预计积分：{{score}}</view>
+	<view class="show-item">交易价格：￥{{price}}</view>
+</view>
+<van-button class="big-button" size="large" color="#1296db" bindtap="submit">提交预约</van-button>
+
+<van-popup show="{{ show1 }}" position="bottom">
+  <van-picker show-toolbar title="取货司机" columns="{{driverNames }}" bind:change="onDriverChange"
+    bind:cancel="onDriverCancel" bind:confirm="onDriverConfirm" />
+</van-popup>
+<van-popup show="{{ show2 }}" position="bottom">
+  <van-picker show-toolbar title="垃圾可回收公司" columns="{{firmNames}}" bind:cancel="onFirmCancel"
+    bind:confirm="onFirmConfirm" bind:cancel="onFirmCancel" />
+</van-popup>

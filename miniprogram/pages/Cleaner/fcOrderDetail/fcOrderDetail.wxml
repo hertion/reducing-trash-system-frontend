@@ -1,0 +1,103 @@
+<view class="container">
+	<!-- <view class="name">{{order.}}</view> -->
+	<!-- <view class="tele"></view> -->
+	<view class="row">
+		<view class="title">发起人姓名：</view>
+		<view class="value">{{order.name}}</view>
+	</view>
+	<view class="row">
+		<view class="title">联系电话：</view>
+		<view class="value">{{order.phoneNumber}}</view>
+	</view>
+	<view class="row">
+		<view class="title">地址：</view>
+		<view class="value">
+		<view >{{order.province+" "+order.city}}</view>
+		<view >{{order.area+" "+order.street+" "+order.village}}</view>
+			<view >{{order.address}}</view>
+		</view>
+	</view>
+	<view class="row">
+		<view class="title"> 订单编号：</view>
+		<view class="value">{{order.id}}</view>
+	</view>
+	<view class="row">
+		<view class="title"> 订单状态：</view>
+		<view class="value" wx:if="{{order.checkStatus}}">已完成</view>
+		<view class="value" wx:else>待处理</view>
+	</view>
+	<view class="row">
+		<view class="title"> 可回收垃圾：</view>
+		<view class="value">
+			<view class="garbage">
+				<view class="garbage-left">
+					<block wx:for="{{order.garbageChooses}}" wx:key="index">
+						<view class="item" wx:if="{{(item.garbage.category)=='可回收垃圾'&&((item.amount)!=0)}}">
+							{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}
+						</view>
+					</block>
+				</view>
+				<view class="garbage-right" bindtap="gotoRecycle" wx:if="{{!order.checkStatus}}">
+					<image src="../../../images/util/edit2.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="row">
+		<view class="title"> 不可回收垃圾：</view>
+		<view class="value">
+			<view class="garbage">
+				<view class="garbage-left">
+					<block wx:for="{{order.garbageChooses}}" wx:key="index">
+						<view class="item" wx:if="{{(item.garbage.category)=='不可回收垃圾'&&((item.amount)!=0)}}">
+							{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}
+						</view>
+					</block>
+				</view>
+				<view class="garbage-right" bindtap="gotoUnRecycle" wx:if="{{!order.checkStatus}}">
+					<image src="../../../images/util/edit2.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="row">
+		<view class="title"> 就地处理垃圾：</view>
+		<view class="value">
+			<view class="garbage">
+				<view class="garbage-left">
+					<block wx:for="{{order.garbageChooses}}" wx:key="index">
+						<view class="item" wx:if="{{(item.garbage.category)=='自利用垃圾'&&((item.amount)!=0)}}">
+							{{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}
+						</view>
+					</block>
+				</view>
+				<view class="garbage-right" bindtap="gotoSoil" wx:if="{{!order.checkStatus}}">
+					<image src="../../../images/util/edit2.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="row">
+		<view class="title">提交时间：</view>
+		<view class="value">{{order.insertTime}}</view>
+	</view>
+	<view class="row">
+		<view class="title">备注：</view>
+		<view class="value">{{order.remark}}</view>
+	</view>
+	<view class="score">
+		<view class="my-score" wx:if="{{order.checkStatus}}">
+			本单积分：<text class="score-value">{{order.score}}</text>
+		</view>
+		<view class="my-score" wx:else>
+			预计本单积分：<text class="score-value">{{order.score}}</text>
+		</view>
+		<view class="my-score">
+			建议价格：<text class="score-value">{{order.price}}</text>
+		</view>
+	</view>
+</view>
+<view class="bottom-button" wx:if="{{!order.checkStatus}}">
+	<!-- <van-button type="danger" size="large">取消订单</van-button> -->
+	<van-button color="rgb(18,150,219)" size="large" bindtap="confirmOrder">确认订单</van-button>
+</view>
