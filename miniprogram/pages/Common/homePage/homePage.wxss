@@ -155,10 +155,10 @@ text-align: center;
     background-color:white;
     color: #1296db;
     box-shadow:1px 1px 1px 1px #D3D3D3;
-    width:200rpx ;
-    margin: 0rpx 10rpx;
-     /* width:170rpx ;
-    margin: 0rpx 8rpx; */
+    /* width:200rpx ;
+    margin: 0rpx 10rpx; */
+     width:170rpx ;
+    margin: 0rpx 8rpx;
     padding: 10rpx;
 }
 /* 小贴士 */
@@ -190,5 +190,10 @@ text-align: center;
   text-align: center;
   font-size: smaller;
   color:rgb(18, 150,219);
+}
+.time{
+  text-align: center;
+  color:grey;
+  font-size: smaller;
 }
 

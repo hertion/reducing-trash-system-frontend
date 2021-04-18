@@ -13,6 +13,7 @@ Page({
     unRecycleGarbage: [],
     garbageChooses: [],
     orderId:'',
+    orderKind:'',
   },
   /**
    * 垃圾数量的改变,以及对应的积分变化
@@ -156,10 +157,23 @@ Page({
   submit() {
     app.globalData.fcOrder.garbageChooses = this.data.garbageChooses;
     app.globalData.fcOrder.score = this.data.score;
-    app.globalData.updateFlag=1;
-    wx.navigateTo({
+    if(this.data.orderKind=='fc'){
+      app.globalData.updateFlag=1;
+      wx.navigateTo({
       url: '../fcOrderDetail/fcOrderDetail?id='+this.data.orderId,
     })
+    }
+    if(this.data.orderKind=='cr'){
+      wx.navigateTo({
+        url: '../crAppointment/crAppointment',
+      })
+    }
+    if(this.data.orderKind=='fc2'){
+      wx.navigateTo({
+        url: '../cfAppointment/cfAppointment',
+      })
+    }
+    
   },
   /**
    * 导航所用方法（黑盒）
@@ -184,6 +198,7 @@ Page({
   onLoad: function (options) {
     this.setData({
       orderId:options.orderId,
+      orderKind:options.orderKind,
       unRecycleGarbage: app.globalData.unRecycleGarbage,
       garbageChooses: app.globalData.fcOrder.garbageChooses,
       score:app.globalData.fcOrder.score,

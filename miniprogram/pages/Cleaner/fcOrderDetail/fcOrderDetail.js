@@ -232,7 +232,7 @@ Page({
       this.isBuildChooseArray();
     }
     wx.navigateTo({
-      url: '../unRecycle/unRecycle?orderId=' + this.data.order.id,
+      url: '../unRecycle/unRecycle?orderId=' + this.data.order.id+'&orderKey=fc',
     })
   },
   gotoSoil() {
@@ -240,7 +240,7 @@ Page({
       this.isBuildChooseArray();
     }
     wx.navigateTo({
-      url: '../soil/soil?orderId=' + this.data.order.id,
+      url: '../soil/soil?orderId=' + this.data.order.id+'&orderKey=fc',
     })
   },
   confirmOrder() {
@@ -305,6 +305,7 @@ Page({
    */
   onLoad: function (options) {
     var that = this;
+    console.log(app.globalData.updateFlag);
     if (app.globalData.updateFlag == 0) {
       var id = options.id;
       var price = options.price

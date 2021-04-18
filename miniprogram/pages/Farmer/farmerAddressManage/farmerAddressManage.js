@@ -4,7 +4,7 @@ var address = require("../../../data/mock2");
 Page({
   /**
    * 页面的初始数据
-   */
+   */ 
   data: {
    name:'',
    tele:'',
@@ -74,7 +74,7 @@ Page({
       this.setData({
         value: [areaNum, 0, 0],
         streets: address.streets[id],
-        villages: address.villages[address.strees[id][0].id],
+        villages: address.villages[address.streets[id][0].id],
       })
     } else if (this.data.value[1] != streetNum) {
       // 滑动选择了第二项数据，即街道，此时村显示区-街道对应的第一组数据

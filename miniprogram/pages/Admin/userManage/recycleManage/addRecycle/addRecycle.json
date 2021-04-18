@@ -3,7 +3,8 @@
     "van-field": "@vant/weapp/field/index",
     "van-popup": "@vant/weapp/popup/index",
     "van-cell": "@vant/weapp/cell/index",
-    "van-button": "@vant/weapp/button/index"
+    "van-button": "@vant/weapp/button/index",
+    "van-picker": "@vant/weapp/picker/index"
   },
   "navigationBarTitleText": "添加司机"
 }

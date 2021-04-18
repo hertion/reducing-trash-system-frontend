@@ -35,7 +35,7 @@ Page({
       for (var i = 0; i < t.length; i++) {
         if (t[i] != null) {
           myScore = myScore + ((t[i].amount) * (t[i].garbage.score))
-          if(this.data.orderKind=='fc'){
+          if(this.data.orderKind=='fc'||this.data.orderKind=='fc2'){
             myPrice = myPrice+ ((t[i].amount) * (t[i].garbage.suggestPrice))
           }
           if(this.data.orderKind=='cr'){
@@ -64,7 +64,7 @@ Page({
       for (var i = 0; i < t.length; i++) {
         if (t[i] != null) {
           myScore = myScore + ((t[i].amount) * (t[i].garbage.score));
-          if(this.data.orderKind=='fc'){
+          if(this.data.orderKind=='fc'||this.data.orderKind=='fc2'){
             myPrice = myPrice+ ((t[i].amount) * (t[i].garbage.suggestPrice))
           }
           if(this.data.orderKind=='cr'){
@@ -100,7 +100,7 @@ Page({
       for (var i = 0; i < t.length; i++) {
         if (t[i] != null) {
           myScore = myScore + ((t[i].amount) * (t[i].garbage.score))
-          if(this.data.orderKind=='fc'){
+          if(this.data.orderKind=='fc'||this.data.orderKind=='fc2'){
             myPrice = myPrice+ ((t[i].amount) * (t[i].garbage.suggestPrice))
           }
           if(this.data.orderKind=='cr'){
@@ -130,7 +130,7 @@ Page({
       for (var i = 0; i < t.length; i++) {
         if (t[i] != null) {
           myScore = myScore + ((t[i].amount) * (t[i].garbage.score));
-          if(this.data.orderKind=='fc'){
+          if(this.data.orderKind=='fc'||this.data.orderKind=='fc2'){
             myPrice = myPrice+ ((t[i].amount) * (t[i].garbage.suggestPrice))
           }
           if(this.data.orderKind=='cr'){
@@ -160,7 +160,7 @@ Page({
     for (var i = 0; i < t.length; i++) {
       if (t[i] != null) {
         myScore = myScore + ((t[i].amount) * (t[i].garbage.score));
-        if(this.data.orderKind=='fc'){
+        if(this.data.orderKind=='fc'||this.data.orderKind=='fc2'){
           myPrice = myPrice+ ((t[i].amount) * (t[i].garbage.suggestPrice))
         }
         if(this.data.orderKind=='cr'){
@@ -190,7 +190,7 @@ Page({
     for (var i = 0; i < t.length; i++) {
       if (t[i] != null) {
         myScore = myScore + ((t[i].amount) * (t[i].garbage.score));
-        if(this.data.orderKind=='fc'){
+        if(this.data.orderKind=='fc'||this.data.orderKind=='fc2'){
           myPrice = myPrice+ ((t[i].amount) * (t[i].garbage.suggestPrice))
         }
         if(this.data.orderKind=='cr'){
@@ -210,10 +210,23 @@ Page({
     app.globalData.fcOrder.garbageChooses = this.data.garbageChooses;
     app.globalData.fcOrder.score = this.data.score;
     app.globalData.fcOrder.price = this.data.price;
-    app.globalData.updateFlag=1;
-    wx.navigateTo({
+    if(this.data.orderKind=='fc'){
+      app.globalData.updateFlag=1;
+      wx.navigateTo({
       url: '../fcOrderDetail/fcOrderDetail?id='+this.data.orderId,
     })
+    }
+    if(this.data.orderKind=='cr'){
+      wx.navigateTo({
+        url: '../crAppointment/crAppointment',
+      })
+    }
+    if(this.data.orderKind=='fc2'){
+      wx.navigateTo({
+        url: '../cfAppointment/cfAppointment',
+      })
+    }
+    
   },
   /**
    * 导航所用方法（黑盒）

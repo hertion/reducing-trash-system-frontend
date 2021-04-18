@@ -1,0 +1,14 @@
+<!--miniprogram/pages/Admin/new/new.wxml-->
+<view class="new-container">
+<block wx:for="{{news}}"  wx:key="index">
+  <view wx:if="{{!(item.hidden)}}">
+    <view class="time">{{item.time}}</view>
+  <view class="new-item" data-id="{{item.id}}" bindtap="gotoNewDetail">
+    <view class="new-image"><image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new1.jpg"></image></view>
+    <view class="new-title">{{item.title}}</view>
+  </view>
+  </view>
+</block>
+</view>
+<van-button class="big-button" size="large" color="#1296db" bindtap="gotoAddNew">添加新闻</van-button>
+

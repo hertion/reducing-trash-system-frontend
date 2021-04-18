@@ -1,0 +1,4 @@
+/* miniprogram/pages/Admin/new/add/add.wxss */
+.content{
+  min-height: 500rpx;
+}

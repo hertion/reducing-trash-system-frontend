@@ -1,6 +1,10 @@
 // miniprogram/pages/addFarmer/addFarmer.js
 var address = require("../../../../../data/mock2");
 var app = getApp();
+var firms = {
+  双城区废品回收有限公司A: ['南厂', '北厂'],
+  双城区废品回收有限公司B: ['南厂', '北厂']
+}
 Page({
  /**
     * 控件当前显示的数据
@@ -12,6 +16,19 @@ Page({
     * addressMenuIsShow：是否可见
     */
    data: {
+    show1: false, //垃圾类别弹出层开关
+    company:'',
+    sector:'',
+    firms: [{
+      values: Object.keys(firms),
+      className: 'column1',
+    },
+    {
+      values: firms['双城区废品回收有限公司A'],
+      className: 'column2',
+      defaultIndex: 2,
+    },
+  ],
     //  保洁员基本信息
     name:'',
     tele:'',
@@ -26,6 +43,37 @@ Page({
     villages: [],
     areaInfo: ''
     //
+},
+//部门选择器
+onFirmChange(event) {
+  const {
+    picker,
+    value,
+    index
+  } = event.detail;
+  picker.setColumnValues(1, firms[value[0]]);
+},
+onFirmConfirm(event) {
+  const {
+    picker,
+    value,
+    index
+  } = event.detail;
+  this.setData({
+    company: value[0],
+    sector: value[1],
+    show1: false
+  });
+},
+onCategoryCancel() {
+  this.setData({
+    show1: false
+  });
+},
+showPopup1() {
+  this.setData({
+    show1: true,
+  });
 },
 onNameChange(e){
 this.setData({
@@ -150,7 +198,7 @@ else{
     phoneNumber:this.data.tele
   }
   console.log(data);
-  var link  = app.globalData.http +'/api/admin/add/recycleFirm';
+  var link  = app.globalData.http +'/api/admin/add/recycleFirm?company='+this.data.company+'&sector='+this.data.sector;
   var Token  = app.getToken();
   wx.request({
     url: link,

@@ -1,0 +1,18 @@
+<!--miniprogram/pages/Admin/new/detail/detail.wxml-->
+<view class="container">
+  <image src="cloud://test-9gk0zzoz3f496a49.7465-test-9gk0zzoz3f496a49-1304602363/new3.jpg"></image>
+  <view class="title-container">
+    <view class="title">{{new.title}}</view>
+  <view class="time-author">
+    <view class="time">{{new.insertTime}}</view>
+    <view class="author">{{new.author}}</view>
+  </view>
+  </view>
+  <view class="black"><text decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text>{{new.content}}</view>
+</view>
+<view class="bottom-button" wx:if="{{user.role=='ADMIN'}}">
+  <van-button  color="#1296db" size="large" bindtap="gotoUpdate">编辑新闻</van-button>
+<van-button  type="danger" size="large" bindtap="gotoDelete">删除新闻</van-button>
+</view>
+
+

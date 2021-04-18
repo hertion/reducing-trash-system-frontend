@@ -1,0 +1,29 @@
+<!--miniprogram/pages/Admin/new/update/update.wxml-->
+
+<van-field label="标题" value="{{ title }}" placeholder="请输入新闻标题" border="{{ false }}" bind:change="onTitleChange" />
+<van-field label="作者" value="{{ author}}" placeholder="请输入作者名" border="{{ false }}" bind:change="onAuthorChange" />
+<van-field
+    value="{{ content }}"
+    label="内容"
+    type="textarea"
+    placeholder="请输入新闻内容"
+    autosize
+    label-class="content"
+    bind:change="onContentChange"
+    border="{{ false }}"
+  />
+  <van-divider contentPosition="center">权限设置</van-divider>
+  <van-cell title="农户可见">
+    <van-switch checked="{{ farmerChecked }}" bind:change="onFarmerShowChange" />
+  </van-cell>
+  <van-cell title="保洁员可见">
+    <van-switch checked="{{ cleanerChecked }}" bind:change="onCleanerShowChange" />
+  </van-cell>
+  <van-cell title="司机可见">
+    <van-switch checked="{{ driverChecked }}" bind:change="onDriverShowChange" />
+  </van-cell>
+  <van-cell title="可回收公司可见">
+    <van-switch checked="{{ recycleFirmChecked }}" bind:change="onRecycleFirmShowChange" />
+  </van-cell>
+  <van-button size="large" color="#1296db" bindtap="submit">确认修改</van-button>
+

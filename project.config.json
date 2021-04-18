@@ -145,6 +145,12 @@
         {
           "name": "pages/Driver/driverAppointment/driverAppointment",
           "pathName": "pages/Driver/driverAppointment/driverAppointment",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/Admin/new/add/add",
+          "pathName": "pages/Admin/new/add/add",
           "scene": null
         }
       ]

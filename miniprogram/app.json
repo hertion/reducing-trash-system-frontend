@@ -68,7 +68,11 @@
     "pages/Common/new1/new1",
     "pages/Common/new2/new2",
     "pages/Common/new3/new3",
-    "pages/Common/guide/guide"
+    "pages/Common/guide/guide",
+    "pages/Admin/new/new",
+    "pages/Admin/new/add/add",
+    "pages/Admin/new/detail/detail",
+    "pages/Admin/new/update/update"
   ],
   "window": {
     "backgroundColor": "#DCDCDC",

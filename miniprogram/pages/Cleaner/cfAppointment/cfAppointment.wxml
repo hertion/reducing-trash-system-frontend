@@ -1,2 +1,78 @@
 <!--pages/Cleaner/cfAppointment/cfAppointment.wxml-->
-<text>pages/Cleaner/cfAppointment/cfAppointment.wxml</text>
+<van-field model:value="{{name}}" label="姓名" border="{{ false }}" bind:change="onNameChange" required clearable />
+<van-field model:value="{{tele}}" label="联系电话" border="{{ false }}" bind:blur="onTeleChange" required clearable />
+<van-cell title="地址选择" is-link value="{{areaInfo}}" bindtap='select' border="{{ false }}" />
+<van-field model:value="{{ address }}" label="交付地址" border="{{ false }}" bind:change="onAddressChange" required
+  clearable />
+<view class="card-container">
+  <view class="my-card" bindtap="gotoRecycle">
+    <view class="first-row">
+      <view>
+        <block wx:for="{{garbageChooses}}" wx:key="index">
+          <view class="text" wx:if="{{item.amount!=0&&item!=null}}">
+            {{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}</view>
+        </block>
+      </view>
+      <button class="mini-button" bindtap="gotoFarmerRecycle">可回收垃圾 >
+      </button>
+    </view>
+  </view>
+  <view class="my-card" bindtap="gotoUnRecycle">
+    <view class="first-row">
+      <view>
+        <block wx:for="{{garbageChooses}}" wx:key="index">
+          <view class="text" wx:if="{{item.type=='unRecycle'&&item.amount!=0&&item!=null}}">
+            {{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}</view>
+        </block>
+      </view>
+      <button class="mini-button" bindtap="gotoFarmerUnRecycle">不可回收垃圾 ></button>
+    </view>
+
+  </view>
+  <view class="my-card" bindtap="gotoSoil">
+    <view class="first-row">
+      <view>
+        <block wx:for="{{garbageChooses}}" wx:key="index">
+          <view class="text" wx:if="{{item.type=='soil'&&item.amount!=0&&item!=null}}">
+            {{item.garbage.name}}×{{item.amount}}{{item.garbage.unit}}</view>
+        </block>
+      </view>
+      <button class="mini-button" bindtap="gotoFarmerSoil">就地处理垃圾 ></button>
+    </view>
+
+  </view>
+</view>
+<van-field model:value="{{ remark }}" label="备注" type="textarea" autosize border="{{ false }}"
+  bind:change="onRemarkChange"
+  custom-style="width:90%;margin:20rpx auto 20rpx auto ; box-shadow:1px 1px 1px 1px #D3D3D3; border-radius: 10rpx;" />
+  <view class="show">
+	<view class="show-item">预计积分：{{score}}</view>
+	<view class="show-item">建议价格：￥{{price}}</view>
+</view>
+<view style="visibility:{{addressMenuIsShow ? 'hidden':'visible'}}">
+  <van-button type="info" size="large" class="big-button" bindtap="submit">提交订单</van-button>
+</view>
+
+<view class="picker-view" animation="{{animationAddressMenu}}"
+  style="visibility:{{addressMenuIsShow ? 'visible':'hidden'}}">
+  <!-- 确认取消按钮 -->
+  <view class='btn'>
+    <text catchtap="cityCancel">取消</text>
+    <text style="float: right" catchtap="citySure">确定</text>
+  </view>
+  <!-- 选择地址 -->
+  <picker-view class='cont' bindchange="cityChange" value="{{value}}" wx:key="">
+    <!-- 省 -->
+    <picker-view-column>
+      <view wx:for="{{areas}}" class="picker-item" wx:key="{{index}}">{{item.name}}</view>
+    </picker-view-column>
+    <!-- 市 -->
+    <picker-view-column>
+      <view wx:for="{{streets}}" class="picker-item" wx:key="index">{{item.name}}</view>
+    </picker-view-column>
+    <!-- 区 -->
+    <picker-view-column>
+      <view wx:for="{{villages}}" class="picker-item" wx:key="index">{{item.name}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

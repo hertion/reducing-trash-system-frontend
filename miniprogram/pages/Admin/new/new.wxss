@@ -1,0 +1,40 @@
+/* miniprogram/pages/Admin/new/new.wxss */
+.big-button{
+  position: fixed; 
+  bottom: 0; 
+  width:100%;
+}/* 小贴士 */
+.new-container{
+  margin: 20rpx;
+  padding: 10rpx 10rpx 100rpx 10rpx;
+}
+.title{
+  font-weight: bold;
+  color:rgb(18, 150,219);
+}
+.new-item{
+  box-shadow:1px 1px 1px 1px #D3D3D3;
+  margin-bottom: 10rpx;
+  border-radius: 20rpx;
+}
+.new-image{
+  text-align: center;
+  padding-top: 20rpx;
+  border-radius: 20rpx;
+}
+.new-image image{
+  width: 650rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+}
+.new-title{
+  padding-bottom: 13rpx;
+  text-align: center;
+  /* font-size: smaller; */
+  color:rgb(18, 150,219);
+}
+.time{
+  text-align: center;
+  color:grey;
+  font-size: smaller;
+}
